@@ -1,0 +1,35 @@
+INTRODUCCION A LAS CUENTAS DE AZURE
+
+Cuando trabajas con tus propias aplicaciones y necesidades comerciales, tienes que registrar una cuenta de Azure y se te creará automáticamente una 
+suscripción para ti. Después de crear una cuenta de Azure, puedes crear suscripciones adicionales. Por ejemplo, es posible que la empresa use una única 
+cuenta de Azure para el negocio y suscripciones independientes para los departamentos de desarrollo, marketing y ventas. Una vez que has creado una 
+suscripción de Azure, puedes empezar a crear recursos de Azure dentro de cada suscripción.
+
+¿Qué es la cuenta gratuita de Azure?
+La cuenta gratuita de Azure incluye lo siguiente:
+
+    * Acceso gratuito a productos populares de Azure durante 12 meses.
+    * Crédito para gastar durante los primeros 30 días.
+    * Acceso a más de 25 productos que siempre son gratuitos.
+
+La cuenta gratuita de Azure ofrece de forma óptima un comienzo y exploración a los nuevos usuarios. Para registrarse, necesita un número de teléfono, 
+una tarjeta de crédito y una cuenta de Microsoft o de GitHub. La información de la tarjeta de crédito solo se usa para la verificación de identidad. No 
+se te cobrará por ningún servicio hasta que actualice a una suscripción de pago.
+
+¿Qué es la cuenta de estudiante gratuita de Azure?
+La oferta de la cuenta de estudiante gratuita de Azure incluye lo siguiente:
+
+    * Acceso gratuito a determinados servicios de Azure durante 12 meses.
+    * Un crédito para usar en los primeros 12 meses.
+    * Acceso gratuito a determinadas herramientas de desarrollo de software.
+
+La cuenta de estudiante gratuita de Azure es una oferta para estudiantes que ofrece 100 USD de crédito y herramientas de desarrollo gratuitas. Además, 
+puedes registrarse sin tarjeta de crédito.
+
+¿Qué es el espacio aislado de Microsoft Learn?
+En muchos de los ejercicios de Learn se usa una tecnología denominada espacio aislado, que crea una suscripción temporal que se agrega a la cuenta de 
+Azure. Esta suscripción temporal le permite crear recursos de Azure para la duración de un módulo de Learn. Learn limpia de forma automática los 
+recursos temporales una vez que hayas completado el módulo.
+
+Cuando completas un módulo de Learn, puedes usar la suscripción personal para finalizar los ejercicios que incluye. Pero el espacio aislado es el 
+método preferido, ya que permite crear y probar recursos de Azure sin costo alguno.

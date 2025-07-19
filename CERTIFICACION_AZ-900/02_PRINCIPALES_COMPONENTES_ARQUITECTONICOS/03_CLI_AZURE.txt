@@ -1,0 +1,23 @@
+CLI DE AZURE
+
+Ahora se probará un comando de Azure para comprobar qué versión de la CLI usa en este momento.
+
+az version
+
+
+Si está más familiarizado con BASH, puede usar el comando BASH en su lugar mediante el cambio a la CLI de BASH.
+
+Puede volver al modo de PowerShell si escribe pwsh en la línea de comandos de BASH.
+
+
+Intente ejecutar una actualización en la CLI con az upgrade.
+
+
+MODO INTERACTIVO
+
+Otra manera de interactuar consiste en usar el modo interactivo de la CLI de Azure. Esto cambia el comportamiento de la CLI para parecerse más a un 
+entorno de desarrollo integrado (IDE). El modo interactivo proporciona autocompletar, descripciones de comandos e incluso ejemplos. Si no está 
+familiarizado con BASH y PowerShell, pero quiere usar la línea de comandos, el modo interactivo puede ayudarle.
+
+Escriba az interactive para entrar en modo interactivo.
+

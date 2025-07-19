@@ -1,0 +1,5 @@
+DESCRIPCION DE LA INFRAESTRUCTURA DE ADMINISTRACION DE AZURE 
+
+La infraestructura de administración incluye recursos de Azure y grupos de recursos, suscripciones y cuentas. Comprender la organización jerárquica le 
+ayudará a planear los proyectos y productos dentro de Azure.
+
