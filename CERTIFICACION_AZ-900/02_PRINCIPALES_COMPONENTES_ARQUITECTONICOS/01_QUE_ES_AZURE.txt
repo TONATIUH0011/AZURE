@@ -5,6 +5,26 @@ crear, administrar e implementar aplicaciones en una red global masiva mediante 
 
 
 ¿QUE OFRECE AZURE?
+Innovación ilimitada. Cree aplicaciones inteligentes y soluciones con tecnología, herramientas y servicios avanzados para llevar su negocio al 
+siguiente nivel. Unifique sin problemas su tecnología para simplificar la administración de plataformas y ofrecer innovaciones de forma eficaz y segura 
+en una nube de confianza.
+
+    * Traer ideas a la vida: Cree una plataforma de confianza para avanzar su organización con inteligencia artificial y servicios en la nube líderes 
+    del sector.
+    
+    * Unifique sin problemas: Administre de forma eficaz toda la infraestructura, los datos, los análisis y las soluciones de inteligencia artificial 
+    en una plataforma integrada.
+    
+    * Innovación en la confianza: Confíe en la tecnología de confianza de un asociado dedicado a la seguridad y la responsabilidad.
 
 
 ¿QUE PUEDO HACER CON AZURE?
+Azure proporciona más de 100 servicios que permiten hacer todo, desde la ejecución de aplicaciones existentes en máquinas virtuales hasta la 
+exploración de nuevos paradigmas de software, como bots inteligentes y realidad mixta.
+
+Muchos equipos comienzan a explorar la nube moviendo sus aplicaciones existentes a máquinas virtuales (VM) que se ejecutan en Azure. Migrar las 
+aplicaciones existentes a máquinas virtuales es un buen inicio, pero la nube es mucho más que un lugar diferente para ejecutar las máquinas virtuales.
+
+Por ejemplo, Azure proporciona servicios de inteligencia artificial (IA) y aprendizaje automático (ML) que pueden comunicarse de forma natural con los 
+usuarios a través de la visión, la audición y la voz. También proporciona soluciones de almacenamiento que crecen dinámicamente para dar cabida a 
+grandes cantidades de datos. Los servicios de Azure habilitan soluciones que no son factibles sin la eficacia de la nube.
