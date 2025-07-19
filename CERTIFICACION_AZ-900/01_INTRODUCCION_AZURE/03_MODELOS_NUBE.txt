@@ -1,0 +1,47 @@
+MODELOS DE NUBE
+
+Nube privada
+Comencemos con una nube privada. Una nube privada es, de alguna manera, la evolución 
+natural de un centro de datos corporativo. Es una nube que brinda servicios de TI a 
+través de Internet y es utilizada por una sola entidad. La nube privada proporciona un 
+control mucho mayor para la empresa y su departamento de TI. Sin embargo, también 
+incluye un mayor costo y menos ventajas que una implementación en la nube pública. Por 
+último, una nube privada se puede hospedar desde el centro de datos del sitio. También 
+puede hospedarse en un centro de datos dedicado fuera del sitio, posiblemente incluso 
+por un tercero que haya dedicado ese centro de datos a su empresa.
+
+Nube pública
+Un proveedor de nube de terceros crea, controla y mantiene una nube pública. Con una 
+nube pública, cualquier persona que quiera comprar servicios en la nube puede acceder a 
+los recursos y usarlos. La disponibilidad pública general es una diferencia clave entre 
+las nubes públicas y privadas.
+
+Nube híbrida
+Una nube híbrida es un entorno informático que usa nubes públicas y privadas en un 
+entorno interconectado. Se puede usar un entorno de nube híbrida para permitir el 
+incremento de una nube privada y acomodarse al aumento de la demanda temporal mediante 
+la implementación de recursos de nube pública. La nube híbrida se puede usar para 
+proporcionar una capa adicional de seguridad. Por ejemplo, los usuarios pueden elegir de 
+forma flexible qué servicios mantener en la nube pública y qué implementar en su 
+infraestructura de nube privada.
+
+Nubes múltiples
+Un cuarto escenario y cada vez más probable es un escenario de varias nubes. En un 
+escenario de varias nubes, se usan varios proveedores de nube pública. Tal vez use 
+diferentes características de diferentes proveedores de nube. O quizás haya iniciado su 
+recorrido en la nube con un proveedor y esté en proceso de migración a otro proveedor. 
+Independientemente, en un entorno de varias nubes lidia con dos (o más) proveedores de 
+nube pública y administra los recursos y la seguridad en ambos entornos.
+
+Azure Arc
+Es un conjunto de tecnologías que ayudan a administrar el entorno en la nube. 
+Azure Arc puede ayudar a administrar el entorno de nube, tanto si se trata de una nube 
+pública exclusiva de Azure, una nube privada en el centro de datos, una configuración 
+híbrida o incluso un entorno de varias nubes que se ejecuta en varios proveedores de la 
+nube a la vez.
+
+Azure VMware Solution
+¿Qué ocurre si ya está establecido con VMware en un entorno de nube privada, pero quiere 
+migrar a una nube pública o híbrida? Azure VMware Solution le permite ejecutar las 
+cargas de trabajo de VMware en Azure con una integración y escalabilidad perfectas.
+

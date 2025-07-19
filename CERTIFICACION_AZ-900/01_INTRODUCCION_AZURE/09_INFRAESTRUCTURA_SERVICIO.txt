@@ -1,0 +1,17 @@
+DESCRIPCION DE LA INFRAESTRUCTURA COMO SERVICIO 
+
+La infraestructura como servicio (IaaS) es la categoría más flexible de servicios en la nube, ya que proporciona el máximo control para los recursos en la 
+nube. En un modelo de IaaS, el proveedor de nube es el responsable de mantener el hardware, la conectividad de red (a Internet) y la seguridad física. Todo lo 
+demás será responsabilidad suya: instalación, configuración y mantenimiento del sistema operativo, configuración de red, configuración de base de datos y 
+almacenamiento, etc. Con IaaS, lo que haces básicamente es alquilar el hardware en un centro de datos en la nube, pero puedes hacer lo que quieras con ese 
+hardware.
+
+ESCENARIOS
+Algunos escenarios comunes en los que IaaS puede tener sentido incluyen los siguientes:
+
+    * Migración mediante lift-and-shift Va a configurar recursos en la nube similares al centro de datos local y, después, simplemente moverá las cosas que se 
+    ejecutan localmente para que se ejecuten en la infraestructura IaaS.
+    
+    * Pruebas y desarrollo: has establecido configuraciones para entornos de desarrollo y pruebas que necesita para replicar rápidamente. Puede poner en marcha 
+    o apagar rápidamente los diferentes entornos con una estructura IaaS y mantener al mismo tiempo un control total.
+

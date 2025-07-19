@@ -1,0 +1,58 @@
+MODELO DE RESPONSABILIDAD COMPARTIDA
+
+Es posible que haya oído hablar del modelo de responsabilidad compartida, pero es 
+posible que no comprenda lo que significa o cómo afecta a la informática en la nube.
+
+Comience con un centro de datos corporativo tradicional. La empresa es la responsable de
+mantener el espacio físico, garantizar la seguridad, y mantener o reemplazar los
+servidores si ocurre algo. El departamento de TI se encarga de mantener toda la
+infraestructura y el software necesarios para mantener el centro de datos en
+funcionamiento. También es probable que sean los responsables de mantener todos los
+sistemas revisados y con la versión correcta.
+
+
+Con el modelo de responsabilidad compartida, estas responsabilidades se comparten entre
+el proveedor de servicios en la nube y el consumidor. La seguridad física, la 
+alimentación, la refrigeración y la conectividad de red son responsabilidad del 
+proveedor de servicios en la nube. El consumidor no tiene acceso al centro de datos, por 
+lo que no tendría sentido que tuviera ninguna de esas responsabilidades.
+
+Al mismo tiempo, el consumidor es el responsable de los datos y la información 
+almacenados en la nube. (No querrá que el proveedor de servicios en la nube pueda leer 
+su información). El consumidor también es el responsable de la seguridad de acceso, lo 
+que significa que solo da acceso a aquellos que lo necesitan.
+
+Entonces, para algunas cosas, la responsabilidad depende de la situación. Si usa una 
+base de datos SQL en la nube, el proveedor de servicios en la nube será el responsable 
+de mantener la base de datos real. Pero sigue siendo responsabilidad suya que los datos 
+se ingieran en la base de datos. Si ha implementado una máquina virtual y ha instalado 
+una base de datos SQL en ella, será el responsable de las revisiones y actualizaciones 
+de la base de datos, así como del mantenimiento de los datos y la información 
+almacenadas en ella.
+
+Con un centro de datos local será el responsable de todo. Con la informática en la nube 
+esas responsabilidades cambian. El modelo de responsabilidad compartida está muy 
+vinculado a los tipos de servicio en la nube.  infraestructura como servicio (IaaS), 
+plataforma como servicio (PaaS) y software como servicio (SaaS). IaaS sitúa la mayor 
+responsabilidad en el consumidor y el proveedor de servicios en la nube es el 
+responsable de los conceptos básicos de seguridad física, energía y conectividad. En el 
+extremo opuesto, SaaS sitúa la mayor parte de la responsabilidad en el proveedor de 
+servicios en la nube. PaaS, siendo un punto intermedio entre IaaS y SaaS, se encuentra 
+en algún lugar del medio y distribuye uniformemente la responsabilidad entre el 
+proveedor de nube y el consumidor.
+
+Al usar un proveedor de nube, siempre será responsable de:
+*La información y los datos almacenados en la nube.
+*Los dispositivos que pueden conectarse a la nube (teléfonos móviles, equipos, etc.).
+*Las cuentas e identidades de las personas, servicios y dispositivos de la organización
+
+El proveedor de nube siempre es el responsable de lo siguiente:
+*El centro de datos físico
+*La red física
+*Los hosts físicos
+
+El modelo de servicio determinará la responsabilidad de cosas como lo siguiente:
+*Sistemas operativos
+*Controles de red
+*APLICACIONES
+*Identidad e infraestructura

@@ -1,0 +1,13 @@
+¿QUE ES LA INFORMATICA EN LA NUBE? (CLOUD COMPUTING)
+
+La informatica en la nube es la prestacion de servicios informaticos a traves de
+internet. Los Servicios informaticos incluyen infraestructura de TI comun, como 
+maquinas virtuales, almacenamiento, bases de datos y redes. Los servicios en la nube
+tambien amplian las ofertas de TI tradicionales para incluir cosas como internet de 
+las cosas (IoT), el aprendizaje automatico (ML) y la inteligencia artificial (IA).
+
+Dado que la informatica en la nube usa internet para ofrecer estos servicios, no es
+necesario que la infraestructura fisica la restrinja del mismo modo que un centro de 
+datos tradicional. Esto significa que si necesita aumentar rapidamente la infraestructura
+de TI, no tiene que esperar a crear un centro de datos, sino que puede usar la nube para 
+expandir rapidamente la superficie de TI.

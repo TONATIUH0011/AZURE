@@ -1,0 +1,23 @@
+DESCRIPCION DE LA PLATAFORMA COMO SERVICIO 
+
+La plataforma como servicio (PaaS) es un punto intermedio entre alquilar espacio en un centro de datos (infraestructura como servicio) y pagar por una 
+solución completa e implementada (software como servicio). En un entorno PaaS, el proveedor de nube mantiene la infraestructura física, la seguridad 
+física y la conexión a Internet. También mantienen los sistemas operativos, el middleware, las herramientas de desarrollo y los servicios de 
+inteligencia empresarial que componen una solución en la nube. En un escenario de PaaS, no tiene que preocuparse por las licencias ni la aplicación de 
+revisiones para los sistemas operativos y las bases de datos.
+
+PaaS es ideal para proporcionar un entorno de desarrollo completo sin el molesto de mantener toda la infraestructura de desarrollo.
+
+
+ESCENARIOS
+Algunos escenarios comunes en los que PaaS pueden encajar incluyen:
+
+    * Marco de desarrollo: PaaS ofrece un marco que los desarrolladores pueden usar para desarrollar o personalizar aplicaciones basadas en la nube. De 
+    una manera similar a como se crea una macro de Excel, PaaS permite que los desarrolladores creen aplicaciones a través de componentes de software 
+    integrados. Se incluyen características de la nube, como escalabilidad, alta disponibilidad y funcionalidad multiinquilino, lo que permite reducir 
+    la cantidad de codificación que deben realizar los desarrolladores.
+
+    * Análisis o inteligencia empresarial: las herramientas proporcionadas como servicio con PaaS permiten a las organizaciones analizar y extraer sus 
+    datos, buscar información y patrones y predecir resultados para mejorar la previsión, las decisiones de diseño de productos, las devoluciones de 
+    inversión y otras decisiones empresariales.
+

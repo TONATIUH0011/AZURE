@@ -1,0 +1,47 @@
+MODELO BASADO EN EL CONSUMO
+
+Al comparar los modelos de infraestructura de TI, hay dos tipos de gastos que se deben tener en cuenta. Gastos de capital y gastos operativos. Los gastos de 
+capital suelen ser un gasto por adelantado único para comprar o proteger recursos tangibles. Un edificio nuevo, volver a pavimentar el aparcamiento, crear un 
+centro de datos o comprar un coche de empresa son ejemplos de gastos de capital.
+
+En cambio, los gastos operativos es gastar dinero en servicios o productos a lo largo del tiempo. Alquilar un centro de convenciones, alquilar un vehículo de 
+empresa o suscribirse a servicios en la nube son ejemplos de gastos operativos.
+
+La informática en la nube se encuentra en la partida de gastos operativos porque funciona en un modelo basado en el consumo. Con la informática en la nube, no 
+paga por la infraestructura física, la electricidad, la seguridad ni nada más asociado al mantenimiento de un centro de datos. En lugar de eso, paga por los 
+recursos de TI que usa. Si no usa ningún recurso de TI este mes, no los pagará.
+
+Este modelo basado en el consumo aporta muchas ventajas, por ejemplo:
+*Sin costes por adelantado.
+*No es necesario comprar ni administrar infraestructuras costosas que es posible que los usuarios no aprovechen todo su potencial.
+*Se puede pagar para obtener más recursos cuando se necesiten.
+*Se puede dejar de pagar por los recursos que ya no se necesiten.
+
+Con un centro de datos tradicional, intenta calcular las necesidades futuras de los recursos. Si este cálculo se ha sobrestimado, gasta más en el centro de 
+datos de lo que necesita y puede desperdiciar dinero. Si, por el contrario, se subestima, el centro de datos alcanzará rápidamente la capacidad, y las 
+aplicaciones y los servicios pueden sufrir una disminución en el rendimiento. Arreglar un centro de datos con aprovisionamiento insuficiente puede tardar mucho 
+tiempo. Es posible que tenga que pedir, más hardware, recibirlo e instalarlo. También deberá agregar alimentación, refrigeración y redes para el hardware 
+adicional.
+
+En un modelo basado en la nube, no tiene que preocuparse por obtener las necesidades justas de recursos. Si descubre que necesita más máquinas virtuales, se 
+agregan más. Si la demanda disminuye y no necesita tantas máquinas virtuales, se quitan las máquinas según sea necesario. En cualquier caso, solo paga por las 
+máquinas virtuales que usa, no por la "capacidad adicional" que tiene el proveedor de nube.
+
+
+
+COMPARACION DE LOS MODELOS DE PRECIOS EN LA NUBE
+
+La informática en la nube es la prestación de servicios informáticos a través de Internet mediante un modelo de precios de pago por uso. Normalmente solo se 
+paga por los servicios en la nube que se usan, lo que permite:
+
+*Planificar y administrar los costos operativos.
+*Ejecutar la infraestructura de forma más eficaz.
+*Escalar a medida que cambien las necesidades empresariales.
+
+Dicho de otro modo, la informática en la nube es una forma de alquilar potencia de proceso y almacenamiento de un centro de datos de terceros. Los recursos de 
+la nube se pueden tratar igual que los recursos de un centro de datos propio. Pero, a diferencia de en su propio centro de datos, cuando haya terminado de usar 
+recursos en la nube, los devuelve. Únicamente se le cobrará por lo que use.
+
+En lugar de mantener las CPU y el almacenamiento en un centro de datos, se alquilan durante el tiempo que sea necesario. El proveedor de nube se encarga de 
+mantener la infraestructura subyacente por usted. La nube permite resolver rápidamente los desafíos empresariales más difíciles y proporcionar soluciones de 
+vanguardia a los usuarios.

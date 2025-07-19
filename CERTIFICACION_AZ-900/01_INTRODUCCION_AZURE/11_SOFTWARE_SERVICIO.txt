@@ -1,0 +1,21 @@
+DESCRIPCION DEL SOFTWARE COMO SERVICIO 
+
+Software como servicio (SaaS) es el modelo de servicio en la nube más completo desde el punto de vista del producto. Con el SaaS, básicamente estás 
+alquilando o usando una aplicación totalmente desarrollada. El correo electrónico, el software financiero, las aplicaciones de mensajería y el software 
+de conectividad son ejemplos comunes de una implementación de SaaS.
+
+Aunque el modelo de SaaS puede ser el menos flexible, también es el más sencillo de poner en marcha. Requiere la menor cantidad de conocimientos 
+técnicos o experiencia para emplearlo plenamente.
+
+El modelo de responsabilidad compartida se aplica a todos los tipos de servicio en la nube. SaaS es el modelo que sitúa la mayor responsabilidad en el 
+proveedor de nube y la menor responsabilidad en el usuario. En un entorno de SaaS, serán responsabilidad suya los datos que ha puesto en el sistema, 
+los dispositivos que le permiten conectarse al sistema y los usuarios que tienen acceso. De casi todo lo demás se encargará el proveedor de nube. El 
+proveedor de servicios en la nube es responsable de la seguridad física de los centros de datos, el suministro eléctrico, la conectividad de red, así 
+como del desarrollo de aplicaciones y la instalación de actualizaciones.
+
+ESCENARIOS
+Algunos escenarios comunes para SaaS son los siguientes:
+
+    *Correo electrónico y mensajería
+    *Aplicaciones de productividad empresarial
+    *Seguimiento de finanzas y gastos
