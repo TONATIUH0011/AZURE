@@ -3,3 +3,104 @@ DESCRIPCION DE LA INFRAESTRUCTURA DE ADMINISTRACION DE AZURE
 La infraestructura de administración incluye recursos de Azure y grupos de recursos, suscripciones y cuentas. Comprender la organización jerárquica le 
 ayudará a planear los proyectos y productos dentro de Azure.
 
+
+RECURSOS Y GRUPO DE RECURSOS
+Un recurso es el bloque de creación básico de Azure. Todo lo que cree, aprovisione, implemente, etc., es un recurso. Máquinas virtuales (VM), redes 
+virtuales, bases de datos, servicios cognitivos, etc., se consideran recursos dentro de Azure.
+
+Los grupos de recursos son simplemente agrupaciones de recursos. Al crear un recurso, es necesario colocarlo en un grupo de recursos. Aunque un grupo 
+de recursos puede contener muchos recursos, un único recurso solo puede estar en un grupo de recursos a la vez. Es posible que algunos recursos se 
+muevan entre grupos de recursos, pero al mover un recurso a un nuevo grupo, ya no estará asociado al grupo anterior. Además, los grupos de recursos no 
+se pueden anidar, lo que significa que no se puede colocar el grupo de recursos B dentro del grupo de recursos A.
+
+Los grupos de recursos proporcionan una manera cómoda de agrupar recursos. Al aplicar una acción a un grupo de recursos, se aplicará a todos los 
+recursos que contiene. Si elimina un grupo de recursos, se eliminarán todos los recursos que contiene. Si concede o deniega el acceso a un grupo de 
+recursos, habrá concedido o denegado acceso a todos los recursos que contiene.
+
+Al aprovisionar recursos, es conveniente pensar en la estructura del grupo de recursos que mejor se adapte a las necesidades.
+
+Por ejemplo, si vas a configurar un entorno de desarrollo temporal, agrupar todos los recursos significa que puede desaprovisionar todos los recursos 
+asociados a la vez si elimina el grupo de recursos. Si vas a aprovisionar recursos de proceso que necesitarán tres esquemas de acceso diferentes, puede 
+ser mejor agruparlos en función del esquema de acceso y, después, asignar acceso en el nivel de grupo de recursos.
+
+No hay reglas rígidas sobre cómo se usan los grupos de recursos, por lo que debe tener en cuenta cómo configurarlos para maximizar su utilidad.
+
+
+SUSCRIPCIONES DE AZURE
+En Azure, las suscripciones son una unidad de administración, facturación y escala. Al igual que los grupos de recursos son una manera de organizar 
+lógicamente los recursos, las suscripciones permiten organizar lógicamente los grupos de recursos y facilitar la facturación.
+
+* El uso de Azure requiere una suscripción de Azure. Una suscripción le proporciona acceso autenticado y autorizado a los servicios y productos de 
+Azure. Además, también le permite aprovisionar los recursos. Una suscripción de Azure se vincula a una cuenta de Azure, que es una identidad de 
+Microsoft Entra ID o en un directorio en el que confía Microsoft Entra ID.
+
+Una cuenta puede tener varias suscripciones, pero solo es obligatorio tener una. En una cuenta de varias suscripciones, puede usarlas para configurar 
+diferentes modelos de facturación y aplicar diferentes directivas de administración de acceso. Puede usar las suscripciones de Azure para definir 
+límites en torno a los productos, servicios y recursos de Azure. Hay dos tipos de límites de suscripción que puede utilizar:
+
+    * Límite de facturación: este tipo de suscripción determina cómo se factura una cuenta de Azure por usar Azure. Puede crear varias suscripciones 
+    para diferentes tipos de requisitos de facturación. Azure genera facturas e informes de facturación independientes para cada suscripción, de modo 
+    que pueda organizar y administrar los costos.
+    
+    * Límite de control de acceso: Azure aplica directivas de administración de acceso en el nivel de suscripción y puede crear suscripciones 
+    independientes para reflejar diferentes estructuras organizativas. Por ejemplo, dentro de una empresa hay diferentes departamentos a los que se 
+    pueden aplicar directivas de suscripción de Azure distintas. Este modelo de facturación le permite administrar y controlar el acceso a los recursos 
+    que los usuarios aprovisionan con suscripciones específicas.
+
+
+CREACION DE UNA SUSCRIPCION DE AZURE ADICIONAL
+De forma similar al uso de grupos de recursos para separar los recursos por función o acceso, es posible que quiera crear suscripciones adicionales con 
+fines de administración de recursos o facturación. Por ejemplo, puedes optar por crear suscripciones adicionales para separar lo siguiente:
+
+    *  Entornos: puede optar por crear suscripciones para configurar entornos independientes para desarrollo y pruebas, seguridad o para aislar los 
+    datos por motivos de cumplimiento. Este diseño es especialmente útil porque el control de acceso a los recursos se produce en el nivel de 
+    suscripción.
+
+    * Estructuras organizativas: puede crear suscripciones para reflejar diferentes estructuras organizativas. Por ejemplo, podría limitar un equipo a 
+    recursos de bajo costo, al tiempo que permite que el departamento de TI tenga un alcance completo. Este diseño permite administrar y controlar el 
+    acceso a los recursos que los usuarios aprovisionan en cada suscripción.
+
+    * Facturación: puede crear suscripciones adicionales con fines de facturación. Dado que los costos se agregan primero en el nivel de suscripción, 
+    es posible que quieras crear suscripciones para administrar y realizar un seguimiento de los costos en función de sus necesidades. Por ejemplo, 
+    puede que quieras crear una suscripción para las cargas de trabajo de producción, y otra suscripción para las cargas de trabajo de desarrollo y 
+    pruebas.
+
+
+GRUPOS DE ADMINISTRACION DE AZURE
+La última pieza es el grupo de administración. Los recursos se recopilan en grupos de recursos y los grupos de recursos se recopilan en suscripciones. 
+Si acaba de empezar en Azure, podría parecer una jerarquía suficiente para mantener las cosas organizadas. Pero imagine que trabaja con varias 
+aplicaciones, varios equipos de desarrollo, en varias zonas geográficas.
+
+Si tienes muchas suscripciones, es posible que necesite una forma de administrar con eficacia el acceso, las directivas y el cumplimiento para esas 
+suscripciones. Los grupos de administración de Azure proporcionan un nivel de ámbito por encima de las suscripciones. Las suscripciones se organizan en 
+contenedores llamados grupos de administración, a los que se aplican condiciones de gobernanza. Todas las suscripciones de un grupo de administración 
+heredan automáticamente las condiciones que tenga aplicadas, de la misma manera que los grupos de recursos heredan la configuración de las 
+suscripciones y los recursos heredan de los grupos de recursos. Los grupos de administración proporcionan capacidad de administración de nivel 
+empresarial a gran escala con independencia del tipo de suscripciones que tenga. Los grupos de administración se pueden anidar.
+
+
+JERARQUIA DE GRUPO DE ADMINISTRACION, SUSCRIPCIONES Y GRUPO DE RECURSOS
+Puede compilar una estructura flexible de grupos de administración y suscripciones para organizar los recursos en una jerarquía para una administración 
+unificada de las directivas y el acceso.
+
+Algunos ejemplos de cómo podría usar los grupos de administración podrían ser los siguientes:
+
+    * Cree una jerarquía que aplique una directiva. Podría limitar las ubicaciones de las máquinas virtuales a la región Oeste de EE. UU. en un grupo 
+    denominado Producción. Esta directiva se heredará en todas las suscripciones descendientes de ese grupo de administración y se aplicará a todas las 
+    máquinas virtuales de esas suscripciones. El propietario de los recursos o las suscripciones no puede modificar esta directiva de seguridad, lo que 
+    permite una gobernanza mejorada.
+    
+    * Proporcionar acceso de usuario a varias suscripciones. Al mover varias suscripciones bajo un grupo de administración, puede crear una asignación 
+    del control de acceso basado en roles (RBAC) en el grupo de administración. La asignación de RBAC de Azure en el nivel de grupo de administración 
+    significa que todos los grupos de administración secundaria, las suscripciones, los grupos de recursos y los recursos bajo ese grupo de 
+    administración también heredarían esos permisos. Una asignación en el grupo de administración puede permitir a los usuarios tener acceso a todo lo 
+    que necesitan, en lugar de crear scripts de Azure RBAC sobre las distintas suscripciones.
+
+Datos importantes sobre los grupos de administración:
+
+    * Se admiten 10 000 grupos de administración en un único directorio.
+
+    * Un árbol de grupo de administración puede admitir hasta seis niveles de profundidad. Este límite no incluye el nivel raíz ni el nivel de suscripción.
+
+    * Cada grupo de administración y suscripción solo puede admitir un elemento primario.
+
