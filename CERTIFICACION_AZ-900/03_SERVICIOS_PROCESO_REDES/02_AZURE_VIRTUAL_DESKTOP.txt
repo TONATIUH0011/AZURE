@@ -1,0 +1,24 @@
+DESCRIPCION DE AZURE VIRTUAL DESKTOP
+
+Otro tipo de máquina virtual es Azure Virtual Desktop. Azure Virtual Desktop es un servicio de virtualización de aplicaciones y de escritorio que se 
+ejecuta en la nube. Permite usar una versión hospedada en la nube de Windows desde cualquier ubicación. Azure Virtual Desktop funciona en todos los 
+dispositivos y sistemas operativos, y funciona con aplicaciones que puede usar para acceder a escritorios remotos o a la mayoría de los exploradores 
+modernos.
+
+
+MEJORE LA SEGURIDAD
+Azure Virtual Desktop proporciona administración centralizada de seguridad para los escritorios de los usuarios con el identificador de Microsoft 
+Entra. Puede habilitar la autenticación multifactor para proteger los inicios de sesión de usuario. También puede proteger el acceso a los datos 
+asignando controles de acceso basados en roles (RBACs) granulares a los usuarios.
+
+Con Azure Virtual Desktop, los datos y las aplicaciones se separan del hardware local. El escritorio y las aplicaciones reales se ejecutan en la nube, 
+lo que significa que se reduce el riesgo de que se dejen datos confidenciales en un dispositivo personal. Además, las sesiones de usuario están 
+aisladas en entornos de sesiones únicas y múltiples.
+
+
+IMPLEMENTACION MULTISESION DE WINDOWS 10 O WINDOWS 11
+Azure Virtual Desktop permite usar varias sesiones de Windows 10 o Windows 11 Enterprise, el único sistema operativo basado en cliente windows que 
+permite varios usuarios simultáneos en una sola máquina virtual. Azure Virtual Desktop también proporciona una experiencia más coherente con 
+compatibilidad más amplia con aplicaciones en comparación con los sistemas operativos basados en Windows Server.
+
+

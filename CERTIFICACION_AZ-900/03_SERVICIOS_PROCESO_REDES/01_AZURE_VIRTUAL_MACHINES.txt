@@ -1,0 +1,92 @@
+DESCRIPCION DE AZURE VIRTUAL MACHINES
+
+Con Azure Virtual Machines (VM), puedes crear y usar máquinas virtuales en la nube. Estas máquinas virtuales proporcionan una infraestructura como 
+servicio (IaaS) en forma de un servidor virtualizado y se pueden usar de muchas formas. Como sucede en un equipo físico, puedes personalizar todo el 
+software que se ejecuta en la máquina virtual. Las máquinas virtuales son una opción ideal cuando necesitas lo siguiente:
+
+Control total sobre el sistema operativo (SO).
+Capacidad de ejecutar software personalizado.
+Usar configuraciones de hospedaje personalizadas.
+Una máquina virtual de Azure te ofrece la flexibilidad de la virtualización sin necesidad de adquirir y mantener el hardware físico que ejecuta la 
+máquina virtual. Pero, como oferta de IaaS, tendrá que configurar, actualizar y mantener el software que se ejecuta en la máquina virtual.
+
+Incluso puedes crear o usar una imagen ya creada para aprovisionar rápidamente máquinas virtuales. Al seleccionar una imagen de máquina virtual 
+preconfigurada, podrás crear y aprovisionar una máquina virtual en cuestión de minutos. Una imagen es una plantilla que se usa para crear una máquina 
+virtual y puede que ya incluya un sistema operativo y otro software, como herramientas de desarrollo o entornos de hospedaje web.
+
+
+ESCALADO DE MAQUINAS VIRTUALES EN AZURE
+Se pueden ejecutar máquinas virtuales únicas para pruebas, desarrollo o tareas secundarias. También se pueden agrupar las máquinas virtuales para 
+proporcionar alta disponibilidad, escalabilidad y redundancia. Azure también puede administrar la agrupación de máquinas virtuales con características 
+como conjuntos de escalado y conjuntos de disponibilidad.
+
+
+CONJUNTOS DE ESCALADO DE MAQUINAS VIRTUALES
+Los conjuntos de escalado de máquinas virtuales permiten crear y administrar un grupo de máquinas virtuales idénticas, de carga equilibrada. Si 
+simplemente ha creado varias máquinas virtuales con el mismo propósito, tendría que asegurarse de que todas se han configurado de forma idéntica y, 
+después, configurar parámetros de enrutamiento de red para garantizar la eficacia. También tendría que supervisar el uso para determinar si necesita 
+aumentar o disminuir el número de máquinas virtuales.
+
+En su lugar, con los conjuntos de escalado de máquinas virtuales, Azure automatiza la mayor parte de ese trabajo. Los conjuntos de escalado le permiten 
+administrar, configurar y actualizar de forma centralizada un gran número de máquinas virtuales en cuestión de minutos. El número de instancias de 
+máquina virtual puede aumentar o disminuir automáticamente según la demanda, o bien puede establecerlo para que se escale en función de una 
+programación definida. Los conjuntos de escalado de máquinas virtuales también implementan automáticamente un equilibrador de carga para asegurarse de 
+que los recursos se usan de forma eficaz. Con los conjuntos de escalado de máquinas virtuales, puede crear servicios a gran escala para áreas como 
+proceso, macrodatos y cargas de trabajo de contenedor.
+
+
+CONJUNTOS DE DISPONIBILIDAD DE MAQUINAS VIRTUALES  
+Los conjuntos de disponibilidad de máquinas virtuales son otra herramienta que le ayudará a crear un entorno más resistente y de alta disponibilidad. 
+Los conjuntos de disponibilidad están diseñados para garantizar que las máquinas virtuales escalen las actualizaciones y tengan una conectividad de red 
+y potencia variadas, lo que evita que se pierdan todas las máquinas virtuales debido a un solo fallo de energía o de la red.
+
+La disponibilidad logra estos objetivos mediante la agrupación de máquinas virtuales de dos maneras: actualizar el dominio y el dominio de error.
+
+    * Dominio de actualización: agrupa las máquinas virtuales que se pueden reiniciar al mismo tiempo. Esta configuración le permite aplicar 
+    actualizaciones al saber que solo una agrupación de dominios de actualización está sin conexión a la vez. Todas las máquinas de una actualización 
+    de dominio de actualización. A un grupo de actualizaciones que realiza el proceso de actualización se le asigna un tiempo de 30 minutos de 
+    recuperación antes de que se inicie el mantenimiento en el siguiente dominio de actualización.
+
+    * Dominio de error: agrupa las máquinas virtuales por fuente de alimentación común y conmutador de red. De forma predeterminada, un conjunto de 
+    disponibilidad divide las máquinas virtuales en hasta tres dominios de error. Esto ayuda a protegerse frente a un error de alimentación física o de 
+    la red al tener las máquinas virtuales en dominios de error diferentes (por tanto, conectadas a diferentes recursos de alimentación y red).
+
+Lo mejor de todo es que la configuración de un conjunto de disponibilidad no supone ningún costo adicional. Solo paga por las instancias de máquina 
+virtual que cree.
+
+
+EJEMPLOS DE CUANDO USAR MAQUINAS VIRTUALES
+Algunos ejemplos comunes o casos de uso para máquinas virtuales son los siguientes:
+
+    * Durante las pruebas y el desarrollo. Las máquinas virtuales proporcionan una manera rápida y sencilla de crear distintas configuraciones de 
+    sistema operativo y de aplicación. El personal encargado de las pruebas y del desarrollo puede eliminar fácilmente las máquinas virtuales cuando ya 
+    no las necesite.
+
+    * Al ejecutar aplicaciones en la nube. La capacidad de ejecutar determinadas aplicaciones en la nube pública, en lugar de crear una infraestructura 
+    tradicional para ejecutarlas, puede proporcionar importantes beneficios económicos. Por ejemplo, es posible que una aplicación necesite controlar 
+    las fluctuaciones en la demanda. Apagar las máquinas virtuales cuando no las necesite o iniciarlas rápidamente para satisfacer un aumento repentino 
+    de la demanda significa que solo paga por los recursos que se usan.
+
+    * Al ampliar el centro de datos a la nube: una organización puede extender las capacidades de su propia red local mediante la creación de una red 
+    virtual en Azure y la adición de máquinas virtuales a esa red virtual. Las aplicaciones como SharePoint se pueden ejecutar en una máquina virtual 
+    de Azure en lugar de hacerlo de forma local. Esta disposición hace que sea más sencilla o menos costosa de implementar que en un entorno local.
+
+    * Durante la recuperación ante desastres: como sucede con la ejecución de ciertos tipos de aplicaciones en la nube y la ampliación de una red local 
+    a la nube, puede obtener un ahorro considerable en costos si se usa un enfoque basado en IaaS para la recuperación ante desastres. Si se produce un 
+    error en un centro de datos principal, puede crear máquinas virtuales que se ejecuten en Azure para ejecutar las aplicaciones críticas y, después, 
+    puede apagarlas cuando el centro de datos principal vuelva a estar operativo.
+
+
+TRASLADO A LA NUBE CON MAQUINAS VIRTUALES 
+Las máquinas virtuales también son una opción excelente cuando se mueve de un servidor físico a la nube (también conocido como Lift-and-shift). Puedes 
+crear una imagen del servidor físico y hospedarla en una máquina virtual con pocos o ningún cambio. Al igual que un servidor local físico, debes 
+mantener la máquina virtual: es responsable de mantener el sistema operativo y el software instalados.
+
+
+RECURSOS DE MAQUINA VIRTUAL 
+Al aprovisionar una máquina virtual, también tendrás la oportunidad de elegir los recursos asociados a esa máquina virtual, como los siguientes:
+
+    * Tamaño (propósito, número de núcleos de procesador y cantidad de RAM)
+    * Discos de almacenamiento (unidades de disco duro, unidades de estado sólido, etc.)
+    * Redes (red virtual, dirección IP pública y configuración de puertos)
+

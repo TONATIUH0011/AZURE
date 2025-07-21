@@ -1,0 +1,25 @@
+DESCRIPCION DE AZURE FUNCTIONS
+
+Azure Functions es una opción de proceso sin servidor controlada por eventos que no necesita el mantenimiento de máquinas virtuales ni contenedores. Si 
+compila una aplicación mediante máquinas virtuales o contenedores, esos recursos deben "ejecutarse" para que la aplicación funcione. Con Azure 
+Functions, un evento activa la función, lo que reduce la necesidad de mantener los recursos aprovisionados cuando no hay ningún evento.
+
+
+VENTAJAS DE AZURE FUNCTIONS
+El uso de Azure Functions es idóneo si solo le interesa el código que ejecuta el servicio y no la infraestructura o la plataforma subyacente. Las 
+funciones se usan normalmente cuando se debe realizar un trabajo en respuesta a un evento (a menudo a través de una solicitud REST), un temporizador o 
+un mensaje de otro servicio de Azure, y cuando ese trabajo puede completarse rápidamente, en segundos o en menos tiempo.
+
+Functions se escala automáticamente según la demanda, por lo que es una opción correcta cuando la demanda es variable.
+
+Azure Functions ejecuta el código cuando se desencadena y desasigna automáticamente los recursos cuando finaliza la función. En este modelo, Azure solo 
+le cobra por el tiempo de CPU usado mientras se ejecuta la función.
+
+Las funciones pueden ser sin estado o con estado. Cuando no tienen estado (el valor predeterminado), se comportan como si se reiniciaran cada vez que 
+respondan a un evento. Cuando son con estado (denominado Durable Functions), se pasa un contexto a través de la función para realizar el seguimiento 
+antes de la actividad.
+
+Las funciones son un componente clave de la informática sin servidor. También son una plataforma de proceso general para ejecutar cualquier tipo de 
+código. Si cambian las necesidades de la aplicación del desarrollador, se puede implementar el proyecto en un entorno que no sea sin servidor. Esta 
+flexibilidad permite administrar el escalado, ejecutar en redes virtuales e incluso aislar por completo las funciones.
+
