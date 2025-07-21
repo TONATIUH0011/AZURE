@@ -1,0 +1,3 @@
+DESPLIEGUE Y AUTOMATIZACION 
+    DevOps (CI/CD)
+    Automatizacion de tareas (infraestructura y servicios)

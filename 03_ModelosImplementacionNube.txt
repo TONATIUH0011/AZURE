@@ -1,0 +1,55 @@
+MODELOS DE LA IMPLEMENTACION DE LA NUBE
+Los modelos representan diferentes niveles de servicios en la computacion en la nube. Estos modelos permiten a las organizaciones elegir el grado de control y flexibilidad que necesitan, a la vez que optimizan los costos y la eficiencia operativa.
+
+    1. IaaS (Infrastructure as a Service): 
+        Es un modelo de computacion en la nube que proporciona recursos de infraestructura basica como servidores, almacenamiento, redes y otros componentes tecnologicos esenciales a traves de la nube. Los usuarios pueden alquilar estos recursos en lugar de tener que adquirir y administrar hardware fisico.
+
+        Componentes Clave: 
+            * Servidores Virtuales: Acceso a servidores virtualizados que pueden ejecutarse en maquinas fisicas alojadas en centros de datos. 
+            * Almacenamiento: Espacios de almacenamiento escalables, que incluyen discos, bases de datos, y almacenamiento en bloque o en objetos.
+            * Redes: Capacidad para crear redes privadas virtuales (VPN), balanceadores de carga y otros servicios de conectividad.
+            * Seguridad: Proteccion de los datos y acceso mediante configuraciones de red y protocolos de seguridad.
+
+        Ventajas: 
+            * Escalabilidad: Puedes incrementar o reducir los recursos segun lo necesites (por ejemplo, almacenamiento y capacidad de computo).
+            * Flexibilidad: Tienes control sobre las maquinas virtuales, el sistema operativo y las aplicaciones que se ejecutan en ellas.
+            * Costos: Solo pagas por lo que usas, lo que optimiza el presupuesto al eliminar la necesidad inicial de hardware.
+
+
+    2. PaaS (Platform as a Service):
+        Es un modelo que proporciona una plataforma completa que incluye tanto infraestructura como software para permitir a los desarrolladores crear, ejecutar y administrar aplicaciones sin tener que gestionar la infraestructura subyacente.
+
+        Componentes Clave: 
+            * Herramientas de Desarrollo: IDEs (entorno de desarrollo integrados), marcos de desarrollo y bibliotecas que permiten a los desarrolladores crear aplicaciones mas rapidamente. 
+            * Bases de Datos: Bases de datos gestionadas que facilitan la creacion y mantenimiento de aplicaciones basadas en bases de datos. 
+            * Middleware: Software que conecta diferentes aplicaciones y servicios, proporcionando funcionalidades de integracion entre aplicaciones. 
+            * Automatizacion y Escalabilidad: Herramientas que permiten la gestion de recursos y el escalado automatico segun las necesidades de la aplicacion.
+
+        Ventajas: 
+            * Productividad del desarrollador: Permite a los desarrolladores enfocarse solo en codigo y la logica de la aplicacion, sin necesidad de gestionar la infraestructura. 
+            * Escalabilidad Automatica: Las plataformas PaaS permiten la escalabilidad de las aplicaciones sin intervencion manual.
+            * Optimizacion de Recursos: Los usuarios no necesitan preocuparse por el manejo de servidores, actualizaciones de software o parches de seguridad.
+
+
+    3. SaaS (Software as a Service):
+        Es el modelo de entrega de software mas comun, en el cual las aplicaciones se ofrecen a traves de la nube, sin necesidad de instalacion o mantenimiento por parte del usuario final. Los usuarios acceden a las aplicaciones a traves de internet, generalmente mediante un navegador web.
+
+        Componentes Clave: 
+            * Aplicaciones alojadas en la nube: El software se aloja en servidores remotos y esta disponible para el usuario mediante un modelo de suscripcion.
+            * Gestion de Usuarios: Los usuarios pueden gestionar sus cuentas y datos a traves de un portal de administracion. 
+            * Mantenimiento y actualizaciones: El proveedor del software es responsable de mantener y actualizar la aplicacion, lo que significa que los usuarios siempre tienen acceso a la ultima version.
+            * Multiplataforma: La mayoria de las aplicaciones SaaS son accesibles desde cualquier dispositivo con acceso a internet.
+
+        Ventajas
+            * Acceso Remoto: Los usuarios pueden acceder a las aplicaciones desde cualquier lugar y en cualquier dispositivo con conexion a internet.
+            * No requiere mantenimiento: El proveedor del servicio es responsable del mantenimiento de la infraestructura, las actualizaciones y la seguridad.
+            * Modelo de pago por uso: Los usuarios pagan solo por el uso de la aplicacion, generalmente a traves de una suscripcion mensual o anual.
+
+
+    
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+¿QUE ES LA NUBE?
+    Definicion: 
+    La computacion en la nube (cloud computing) es un modelo de prestacion de servicios informaticos a traves de internet, en el que se utilizan servidores, almacenamiento, bases de datos, redes, software y otros recursos tecnologicos gestionados de forma remota, es decir, en servidores ubicados en centros de datos.
+    
+    En lugar de depender de equpos locales o servidores fisicos propios, las organizaciones y los usuarios pueden acceder a estos recursos a traves de internet, lo que permite una gran flexibilidad y eficiencia.
+
+    El objetivo principal d ela computacion en la nube es reducir la complejidad para los usuarios y las empresas, permitiendoles acceder a tecnologia avanzada sin tener que gestionar o mantener fisicamente servidores y hardware
+
+    Beneficios:
+        1.Escalabilidad: 
+            La escalabilidad es una de las caracteristicas mas importantes de la computacion en la nube. Esto significa que los recursos (como almacenamiento, potencia de procesamiento, etc) pueden aumentarse o reducirse rapidamente segun las necesidades del usuario o la empresa.
+            
+            * Vertical: Aumentar o disminuir la capacidad de una maquina virtual
+            * Horizontal: Añadir mas instancias de servidores para manejar mayores cargas de trabajo
+        
+        2.Disponibilidad: 
+            Los servicios de la nube estan diseñados para ser altamente disponibles. Los proveedores de nube distribuyen sus recursos a traves de multiples centros de datos en todo el mundo, lo que asegura que los servicios esten siempre disponibles, incluso si un centro de datos se cae. 
+
+        3.Flexibilidad: 
+            La nube proporciona una gran flexibilidad para las empresas. Las organizaciones pueden elegir que servicios necesitan (almacenamiento, procesamiento de datos, analisis, etc), y solo pagar por lo que usan.
+            Ademas los usuarios pueden acceder a estos recursos desde cualquier lugar, encualquier dispositivo, siempre y cuando tengan conexion a internet.
+            
+            Los desarrolladores pueden elegir entre una amplia variedad de lenguajes de programacion, bases de datos, sistemas operativos y otros servicios de infraestructura, lo que les permite optimizar sus aplicaciones segun sus necesidades especificas.
+
+        4.Costos Reducidos: 
+            La computacion en la nube permite eliminar la necesidad de comprar, mantener y administrar hardware fisico costoso. las empresas pueden alquilar servicios y recursos segun sus necesidades, lo que reduce considerablemente los costos iniciales.
+
+            Los costos operativos se reducen aun mas gracias a la facturacion basada en el uso. Esto significa que los usuarios solo pagan por los recursos que utilizan, sin tener que comprometerse con grandes inversiones por adelantado.
+
+            Ademas, la nube permite a las empresas optimizar sus operaciones mediante la automatizacion de tareas y la provision de recursos de forma eficiente, lo que contribuye a una mayor productividad y rentabilidad.
+
+
+
+

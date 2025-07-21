@@ -1,0 +1,7 @@
+GOBERNANZA Y CUMPLIMIENTO
+    Confidencialidad
+    Integridad
+    Disponibilidad
+
+    Autenticacion
+    Autorizacion
