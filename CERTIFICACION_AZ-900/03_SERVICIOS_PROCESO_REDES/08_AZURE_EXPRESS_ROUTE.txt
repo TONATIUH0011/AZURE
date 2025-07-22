@@ -1,0 +1,74 @@
+DESCRIBIR AZURE EXPRESS ROUTE
+
+ExpressRoute le permite ampliar las redes locales a la nube de Microsoft mediante una conexión privada con la ayuda de un proveedor de conectividad. Esta conexión 
+se denomina circuito ExpressRoute. Con ExpressRoute, puede establecer conexiones con servicios en la nube de Microsoft, como Microsoft Azure y Microsoft 365. Esta 
+característica permite conectar oficinas, centros de datos u otras instalaciones a la nube de Microsoft. Cada ubicación tendría su propio circuito ExpressRoute.
+
+La conectividad puede ser desde una red de conectividad universal (IP VPN), una red Ethernet de punto a punto o una conexión cruzada virtual a través de un 
+proveedor de conectividad en una instalación de ubicación compartida. Las conexiones de ExpressRoute no pasan por la red pública de Internet. Esta configuración 
+permite que las conexiones de ExpressRoute ofrezcan más confiabilidad, velocidades más rápidas, latencias coherentes y mayor seguridad que las conexiones típicas a 
+través de Internet.
+
+
+CARACTERISTICAS Y VENTAJAS DE EXPRESS-ROUTE 
+El uso de ExpressRoute como servicio de conexión entre Azure y las redes locales tiene varias ventajas.
+
+    * Conectividad a servicios en la nube de Microsoft en todas las regiones dentro de la región geopolítica.
+    * Conectividad global a los servicios de Microsoft en todas las regiones con Global Reach de ExpressRoute.
+    * Enrutamiento dinámico entre la red y Microsoft a través del Protocolo de puerta de enlace de borde (BGP).
+    * Redundancia integrada en todas las ubicaciones de configuración entre pares para una mayor confiabilidad.
+
+
+CONECTIVIDAD CON LOS SERVICIOS EN LA NUBE DE MICROSOFT
+ExpressRoute permite el acceso directo a los siguientes servicios en todas las regiones: 
+
+    * Microsoft Office 365
+    * Microsoft Dynamics 365
+    * Servicios de proceso de Azure, como Azure Virtual Machines
+    * Servicios en la nube de Azure, como Azure Cosmos DB y Azure Storage
+
+
+CONECTIVIDAD GLOBAL 
+Puede permitir que Global Reach de ExpressRoute intercambie datos entre los sitios locales si conecta los diferentes circuitos ExpressRoute. Por ejemplo, supongamos 
+que tiene una oficia en Asia y un centro de datos en Europa, ambos con circuitos ExpressRoute que los conectan a la red de Microsoft. Puede usar Global Reach de 
+ExpressRoute para conectar esas dos instalaciones, lo que les permite comunicarse sin transferir datos a traves de la red publica de internet.
+
+
+ENRUTAMIENTO DINAMICO
+ExpressRoute usa el BGP. BGP se usa para intercambiar rutas entre las redes locales y los recursos que se ejecutan en Azure. Este protocolo permite el enrutamiento dinámico entre la red local y los servicios que se ejecutan en la nube de Microsoft.
+
+
+REDUNDANCIA INTEGRADA
+Cada proveedor de conectividad usa dispositivos redundantes para garantizar que las conexiones establecidas con Microsoft tengan alta disponibilidad. Puede configurar varios circuitos para complementar esta característica.
+
+
+MODELOS DE CONECTIVIDAD DE EXPRESS-ROUTE
+ExpressRoute admite cuatro modelos que puede usar para conectar la red local con la nube de Microsoft:
+
+    * Ubicación de CloudExchange
+    * Conexión Ethernet de punto a punto
+    * Conexión universal
+    * Directamente desde sitios de ExpressRoute
+
+
+COUBICACION EN UN INTERCAMBIO EN LA NUBE
+Colocación hace referencia a su centro de datos, oficina u otra instalación que se coloca físicamente en un intercambio en la nube, como un ISP. Si la instalación está colocada en un intercambio en la nube, puede solicitar una conexión cruzada virtual a la nube de Microsoft.
+
+
+CONEXION ETHERNET DE PUNTO A PUNTO
+La conexión Ethernet de punto a punto hace referencia al uso de una conexión punto a punto para conectar la instalación a la nube de Microsoft.
+
+
+REDES UNIVERSALES
+Con la conectividad universal, puede integrar la red de área extensa (WAN) con Azure si proporciona conexiones a las oficinas y los centros de datos. Azure se integra con la conexión WAN para proporcionarle una conexión, como la que tendría entre el centro de datos y las sucursales.
+
+
+DIRECTAMENTE DESDE SITIOS DE EXPRESS-ROUTE
+Puede conectarse directamente a la red global de Microsoft en una ubicación de emparejamiento distribuida estratégicamente por todo el mundo. ExpressRoute Direct proporciona conectividad dual de 100 Gbps o 10 Gbps, que es compatible con la conectividad activa/activa a escala.
+
+
+CONSIDERACIONES SOBRE LA SEGURIDAD
+Con ExpressRoute, los datos no viajan a través de la red pública de Internet, lo que reduce los riesgos asociados a las comunicaciones de Internet. ExpressRoute es una conexión privada de la infraestructura local a la infraestructura de Azure. Incluso si tiene una conexión ExpressRoute, las consultas de DNS, la comprobación de la lista de revocación de certificados y las solicitudes de Azure Content Delivery Network se siguen enviando a través de la red pública de Internet.
+
+
+

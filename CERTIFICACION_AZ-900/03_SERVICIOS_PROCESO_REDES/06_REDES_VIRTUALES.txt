@@ -1,0 +1,90 @@
+DESCRIPCION DE LAS REDES VIRTUALES DE AZURE 
+
+Las redes virtuales y las subredes virtuales de Azure permiten a los recursos de Azure, como las máquinas virtuales, las aplicaciones web y las bases de datos, 
+comunicarse entre sí, con los usuarios de Internet y con los equipos cliente en el entorno local. Una red de Azure se puede considerar una extensión de la red local 
+con recursos que vinculan otros recursos de Azure.
+
+Las redes virtuales de Azure proporcionan las importantes funcionalidades de red siguientes:
+
+    * Aislamiento y segmentación
+    * Comunicación con Internet
+    * Comunicación entre recursos de Azure
+    * Comunicación con los recursos locales
+    * Enrutamiento del tráfico de red
+    * Filtrado del tráfico de red
+    * Conexión de redes virtuales
+
+Las redes virtuales de Azure admiten puntos de conexión públicos y privados para permitir la comunicación entre recursos externos o internos con otros recursos 
+internos.
+
+    * Los puntos de conexión públicos tienen una dirección IP pública y son accesibles desde cualquier parte del mundo.
+    * Los puntos de conexión privados existen dentro de una red virtual y tienen una dirección IP privada en el espacio de direcciones de esa red virtual.
+
+
+AISLAMIENTO Y SEGMENTACION 
+La red virtual de Azure permite crear varias redes virtuales aisladas. Al configurar una red virtual, se define un espacio de direcciones IP privadas con intervalos 
+de direcciones IP públicas o privadas. El intervalo IP solo existe dentro de la red virtual y no es enrutable en Internet. Después, puede dividir ese espacio de 
+direcciones IP en subredes y asignar parte del espacio de direcciones definido a cada subred con nombre.
+
+Para la resolución de nombres, puede usar el servicio de resolución de nombres integrado en Azure. También puede configurar la red virtual para que use un servidor 
+DNS interno o externo.
+
+
+COMUNICACION CON INTERNET
+Puede permitir conexiones entrantes desde Internet mediante la asignación de una dirección IP pública a un recurso de Azure o la colocación del recurso detrás de un 
+equilibrador de carga público.
+
+
+COMUNICACION ENTRE RECURSOS DE AZURE
+Quiere permitir que los recursos de Azure se comuniquen de forma segura entre sí. Puede hacerlo de dos maneras:
+
+Las redes virtuales no solo pueden conectar máquinas virtuales, sino también otros recursos de Azure, como App Service Environment para Power Apps, Azure Kubernetes 
+Service y conjuntos de escalado de máquinas virtuales de Azure.
+Los puntos de conexión de servicio se pueden conectar a otros tipos de recursos de Azure, como cuentas de almacenamiento y bases de datos de Azure SQL. Este enfoque 
+permite vincular varios recursos de Azure con las redes virtuales para mejorar la seguridad y proporcionar un enrutamiento óptimo entre los recursos.
+
+
+COMUNICACION CON LOS RECURSOS LOCALES 
+Las redes virtuales de Azure permiten vincular entre sí los recursos del entorno local y dentro de la suscripción de Azure. De hecho, puede crear una red que 
+abarque tanto el entorno local como el entorno en la nube. Existen tres mecanismos para lograr esta conectividad:
+
+    * Las conexiones de red privada virtual de punto a sitio se establecen desde un equipo ajeno a la organización a la red corporativa. En este caso, el equipo 
+    cliente inicia una conexión VPN cifrada para conectarse a la red virtual de Azure.
+    
+    * Las redes virtuales privadas de sitio a sitio vinculan el dispositivo o puerta de enlace de VPN local con la puerta de enlace de VPN de Azure en una red 
+    virtual. De hecho, puede parecer que los dispositivos de Azure están en la red local. La conexión se cifra y funciona a través de Internet.
+
+    * Azure ExpressRoute proporciona una conectividad privada dedicada a Azure que no se desplaza por Internet. ExpressRoute es útil para los entornos donde se 
+    necesita más ancho de banda e incluso mayores niveles de seguridad.
+
+
+ENRUTAMIENTO DEL TRAFICO DE RED
+De forma predeterminada, Azure enruta el tráfico entre las subredes de todas las redes virtuales conectadas, las redes locales e Internet. También puede controlar 
+el enrutamiento e invalidar esa configuración del siguiente modo:
+
+    * Las tablas de rutas permiten definir reglas sobre cómo se debe dirigir el tráfico. Puede crear tablas de rutas personalizadas que controlen cómo se enrutan 
+    los paquetes entre las subredes.
+
+    * El Protocolo de puerta de enlace de borde (BGP) funciona con puertas de enlace de VPN de Azure, Azure Route Server o Azure ExpressRoute para propagar las 
+    rutas BGP locales a las redes virtuales de Azure.
+
+
+FILTRADO DEL TRAFICO DE RED
+Las redes virtuales de Azure permiten filtrar el tráfico entre las subredes mediante los métodos siguientes:
+
+    * Los grupos de seguridad de red son recursos de Azure que pueden contener varias reglas de seguridad de entrada y salida. Estas reglas se pueden definir para 
+    permitir o bloquear el tráfico en función de factores como el protocolo, el puerto y las direcciones IP de destino y origen.
+
+    * Las aplicaciones virtuales de red son máquinas virtuales especializadas que se pueden comparar con un dispositivo de red protegido. Una aplicación virtual de 
+    red ejerce una función de red determinada, como ejecutar un firewall o realizar la optimización de la red de área extensa (WAN).
+
+
+CONEXION DE REDES VIRTUALES
+Puede vincular redes virtuales entre sí mediante el emparejamiento de red virtual. El emparejamiento permite que dos redes virtuales se conecten directamente entre 
+sí. El tráfico de red entre redes emparejadas es privado y se desplaza por la red troncal de Microsoft, y nunca entra en la red pública de Internet. El 
+emparejamiento permite que los recursos de cada red virtual se comuniquen entre sí. Estas redes virtuales pueden estar en regiones independientes. Esta 
+característica le permite crear una red interconectada global a través de Azure.
+
+Las rutas definidas por el usuario (UDR) permiten controlar las tablas de enrutamiento entre subredes dentro de una red virtual o entre redes virtuales. Esto 
+permite un mayor control sobre el flujo de tráfico de red.
+

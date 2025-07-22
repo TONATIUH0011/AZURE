@@ -1,0 +1,86 @@
+IDENTIFICACION DE LAS OPCIONES DE MIGRACION DE DATOS DE AZURE 
+
+Ahora que comprende las distintas opciones de almacenamiento dentro de Azure, es importante comprender también cómo obtener los datos y la información en Azure. 
+Azure admite la migración en tiempo real de la infraestructura, las aplicaciones y los datos mediante Azure Migrate, así como la migración asincrónica de datos 
+mediante Azure Data Box.
+
+
+AZURE MIGRATE
+Azure Migrate es un servicio que le ayuda a migrar desde un entorno local a la nube. Azure Migrate funciona como centro para ayudarle a administrar la valoración y 
+la migración del centro de datos local a Azure. Ofrece lo siguiente:
+
+    * Plataforma de migración unificada: un único portal para iniciar, ejecutar y realizar un seguimiento de la migración a Azure.
+
+    * Rango de herramientas: una variedad de herramientas para la evaluación y la migración. Las herramientas de Azure Migrate incluyen Azure Migrate: Discovery y 
+    assessment y Azure Migrate: Server Migration. Azure Migrate también se integra con otros servicios y herramientas de Azure, así como con ofertas de proveedores 
+    de software independientes (ISV).
+
+    * Evaluación y migración: en el centro de Azure Migrate, puede evaluar y migrar la infraestructura local a Azure.
+
+
+HERRAMIENTAS INTEGRADAS
+Además de trabajar con herramientas de ISV, el centro de Azure Migrate también incluye las siguientes herramientas para ayudar con la migración:
+
+    * Azure Migrate: detección y evaluación. Detecte y evalúe servidores locales que se ejecutan en VMware, Hyper-V y servidores físicos para preparar la migración 
+    a Azure.
+
+    * Azure Migrate: Server Migration. Migre máquinas virtuales de VMware, máquinas virtuales de Hyper-V, servidores físicos, otros servidores virtualizados y 
+    máquinas virtuales de la nube pública a Azure.
+
+    * Data Migration Assistant. Data Migration Assistant es una herramienta independiente para evaluar servidores de SQL Server. Ayuda a identificar posibles 
+    problemas que bloquean la migración. Identifica características no admitidas, nuevas características que puede aprovechar después de la migración y la ruta de 
+    acceso correcta para la migración de la base de datos.
+
+    * Azure Database Migration Service. Migre bases de datos locales a máquinas virtuales de Azure en las que se ejecutan SQL Server, Azure SQL Database o 
+    instancias administradas de SQL.
+
+    * Asistente para la migración de Azure App Service. Azure App Service Migration Assistant es una herramienta independiente utilizada para evaluar sitios web 
+    locales para la migración a Azure App Service. Use Migration Assistant para migrar aplicaciones web de .NET y PHP a Azure.
+
+    * Azure Data Box. Use los productos de Azure Data Box para trasladar grandes cantidades de datos sin conexión a Azure.
+
+
+AZURE DATA BOX 
+Azure Data Box es un servicio de migración física que ayuda a transferir grandes cantidades de datos de forma rápida, económica y confiable. La transferencia de 
+datos segura se acelera mediante el envío de un dispositivo de almacenamiento propietario de Data Box que tiene una capacidad de almacenamiento utilizable máxima de 
+80 terabytes. Data Box se transporta hacia y desde el centro de datos a través de un transportista regional. Una caja resistente asegura y protege Data Box de daños 
+durante el trayecto.
+
+Puede pedir el dispositivo Data Box a través de Azure Portal para importar o exportar datos desde Azure. Una vez recibido el dispositivo, puede configurarlo 
+rápidamente mediante la interfaz de usuario web local y conectarlo a la red. Una vez que haya terminado de transferir los datos (ya sea dentro o fuera de Azure), 
+simplemente devuelva Data Box. Si va a transferir datos a Azure, los datos se cargan de forma automática una vez que Microsoft vuelve a recibir Data Box. El 
+servicio de Data Box se encarga de realizar el seguimiento de todo el proceso en Azure Portal.
+
+
+CASOS DE USO 
+Data Box es ideal para transferir tamaños de datos con más de 40 TB en escenarios sin conectividad de red limitada. El movimiento de datos puede ser único, 
+periódico o una transferencia de datos masiva inicial seguida de transferencias periódicas.
+
+Estos son los distintos escenarios donde se puede usar Data Box para importar datos en Azure.
+
+    * Migración única: cuando se mueve gran cantidad de datos locales a Azure.
+    
+    * Traslade una biblioteca multimedia de cintas sin conexión a Azure para crear una biblioteca multimedia en línea.
+    
+    * Migre la granja de máquinas virtuales, SQL Server y las aplicaciones a Azure.
+    
+    * Traslade los datos históricos a Azure para un análisis exhaustivo y generar informes con HDInsight.
+    
+    * Transferencia masiva inicial: cuando se realiza una transferencia masiva inicial con Data Box (inicialización) seguida de transferencias incrementales a 
+    través de la red.
+
+    * Cargas periódicas: cuando se genera periódicamente una gran cantidad de datos y es necesario moverlos a Azure.
+
+Estos son los distintos escenarios donde se puede usar Data Box para exportar datos a Azure.
+
+    * Recuperación ante desastres: cuando se restaura una copia de los datos de Azure en una red local. En un escenario de recuperación ante desastres habitual, se 
+    exporta una gran cantidad de datos de Azure se exporta a Data Box. Microsoft luego los envía a Data Box y, en poco tiempo, los datos se restauran en un entorno 
+    local.
+
+    * Requisitos de seguridad: cuando necesita poder exportar datos de Azure debido a los requisitos de seguridad o de la administración pública.
+
+    * Migración de vuelta al entorno local o a otro proveedor de servicios en la nube: cuando quiera mover todos los datos de vuelta al entorno local o a otro 
+    proveedor de servicios en la nube, exporte los datos a través de Data Box para migrar las cargas de trabajo.
+
+Una vez que los datos del pedido de importación se cargan en Azure, los discos del dispositivo se limpian, según las normas NIST 800-88r1. Si el pedido es de 
+exportación, los discos se borran una vez que el dispositivo llega al centro de datos de Azure.

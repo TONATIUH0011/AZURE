@@ -1,0 +1,150 @@
+DESCRIPCION DE LOS SERVICIOS DE ALMACENAMIENTO DE AZURE
+
+La plataforma de Azure Storage incluye los servicios de datos siguientes:
+
+    * Blobs de Azure: un almacén de objetos que se puede escalar de forma masiva para datos de texto y binarios. También incluye compatibilidad con el análisis de 
+    macrodatos a través de Data Lake Storage Gen2.
+    
+    * Azure Files: recursos compartidos de archivos administrados para implementaciones locales y en la nube.
+    
+    * Colas de Azure: un almacén de mensajería para mensajería confiable entre componentes de aplicación.
+
+    * Azure Disks: volúmenes de almacenamiento en el nivel de bloque para máquinas virtuales de Azure.
+
+    * Tablas de Azure: Opción tabla NoSQL para datos estructurados y no relacionales.
+
+
+VENTAJAS DE AZURE STORAGE
+Los servicios de Azure Storage ofrecen las siguientes ventajas para desarrolladores de aplicaciones y profesionales de TI:
+
+    * Duradero y altamente disponible. La redundancia garantiza que los datos estén seguros en caso de producirse errores de hardware transitorios. También puede 
+    optar por replicar datos entre centros de datos o regiones geográficas para obtener protección adicional frente a catástrofes locales o desastres naturales. Los 
+    datos replicados de esta manera permanecen con una alta disponibilidad en caso de que se produzca una interrupción inesperada.
+
+    * Seguro. Todos los datos escritos en una cuenta de Azure Storage se cifran mediante el servicio. Azure Storage proporciona un control pormenorizado sobre quién 
+    tiene acceso a los datos.
+
+    * Escalable. Azure Storage está diseñado para poderse escalar de forma masiva para satisfacer las necesidades de rendimiento y almacenamiento de datos de las 
+    aplicaciones de hoy en día.
+
+    * Administrado. Azure controla automáticamente el mantenimiento, las actualizaciones y los problemas críticos del hardware.
+
+    * Accesible. Es posible acceder a los datos de Azure Storage desde cualquier parte del mundo a través de HTTP o HTTPS. Microsoft proporciona bibliotecas cliente 
+    para Azure Storage en diversos lenguajes, incluidos .NET, Java, Node.js, Python, PHP, Ruby, Go y otros, así como una API REST consolidada. Azure Storage admite 
+    la escritura en Azure PowerShell o la CLI de Azure. Y Azure Portal y el Explorador de Azure Storage ofrecen soluciones visuales sencillas para trabajar con los 
+    datos.
+
+
+BLOBS DE AZURE 
+Azure Blob Storage es una solución de almacenamiento de objetos para la nube. Puede almacenar grandes cantidades de datos, como datos de texto o binarios. Azure 
+Blob Storage no está estructurada, lo que significa que no hay ninguna restricción en cuanto a los tipos de datos que puede contener. Blob Storage puede administrar 
+miles de cargas simultáneas, cantidades enormes de datos de vídeo, archivos de registro en constante crecimiento y es accesible desde cualquier lugar con conexión a 
+Internet.
+
+Los blobs no están limitados a formatos de archivo comunes. Un blob podría contener gigabytes de datos binarios transmitidos desde un instrumento científico, un 
+mensaje cifrado para otra aplicación o datos en un formato personalizado para una aplicación que se está desarrollando. Una ventaja del almacenamiento en blobs con 
+respecto al almacenamiento en disco es que no requiere que los desarrolladores piensen en discos o los administren. Los datos se cargan como blobs y Azure se 
+encarga de las necesidades de almacenamiento físico.
+
+Blob Storage resulta muy conveniente para lo siguiente:
+
+    * Visualización de imágenes o documentos directamente en un explorador.
+    * Almacenamiento de archivos para acceso distribuido.
+    * Streaming de audio y vídeo.
+    * Almacenamiento de datos para copia de seguridad y restauración, recuperación ante desastres y archivado.
+    * Almacenamiento de datos para el análisis en local o en un servicio hospedado de Azure.
+
+
+ACCESO A BLOB STORAGE 
+Se puede acceder a los objetos de Blob Storage desde cualquier parte del mundo a través de HTTP o HTTPS. Los usuarios o las aplicaciones cliente pueden acceder a 
+los blobs mediante direcciones URL, la API REST de Azure Storage, Azure PowerShell, la CLI de Azure o una biblioteca cliente de Azure Storage. Las bibliotecas de 
+cliente de almacenamiento están disponibles para varios lenguajes, como .NET, Java, Node.js, Python, PHP y Ruby.
+
+
+NIVELES DE BLOB STORAGE
+Los datos almacenados en la nube pueden crecer a un ritmo exponencial. Para administrar los costos de las crecientes necesidades de almacenamiento, resulta útil 
+organizar los datos en función de atributos como la frecuencia de acceso y el período de retención planeada. Los datos almacenados en la nube se pueden controlar de 
+forma distinta según la forma en que se generan, se procesan y se accede a ellos a lo largo de su vigencia. Se puede acceder y modificar ciertos datos de forma 
+activa a lo largo de su duración. Se accede con frecuencia a ciertos datos al inicio de su vida útil hasta que el acceso cae drásticamente a medida que envejecen. 
+Algunos datos permanecen inactivos en la nube y, después de que se almacenan, no se accede a ellos prácticamente nunca. Para dar cabida a estas diferentes 
+necesidades de acceso, Azure proporciona varios niveles de acceso, que puede usar para equilibrar los costos de almacenamiento con sus necesidades de acceso.
+
+Azure Storage ofrece diferentes niveles de acceso para el almacenamiento de blobs, lo que le ayuda a almacenar datos de objetos de la manera más rentable. Entre los 
+niveles de acceso disponibles se incluyen:
+
+    * Nivel de acceso frecuente: optimizado para almacenar datos a los que se accede con frecuencia (por ejemplo, imágenes para el sitio web).
+    
+    * Nivel de acceso esporádico: optimizado para datos a los que se accede con poca frecuencia y que se almacenan al menos durante 30 días (por ejemplo, las 
+    facturas de los clientes).
+
+    * Nivel de acceso frío: está optimizado para almacenar datos a los que se accede con poca frecuencia y al menos durante 90 días.
+    
+    * Nivel de acceso de archivo: conveniente para datos a los que raramente se accede y que se almacenan durante al menos 180 días con requisitos de latencia 
+    flexibles (por ejemplo, copias de seguridad a largo plazo).
+
+Las siguientes consideraciones se aplican a los distintos niveles de acceso:
+
+    * Los niveles de acceso frecuente, esporádico y frío son los únicos que se pueden establecer en el nivel de cuenta. El nivel de acceso de archivo no está 
+    disponible en el nivel de cuenta.
+
+    * Los niveles frecuente, esporádico, frío y de archivo se pueden establecer en el nivel de blob durante la carga o después de esta.
+
+    * Los datos de los niveles de acceso esporádico y frío pueden tolerar una disponibilidad ligeramente inferior, pero aun así requieren una gran durabilidad y 
+    latencia de recuperación, y unas características de rendimiento similares a las de los datos de acceso frecuente. En el caso de los datos de acceso esporádico y 
+    frío, un contrato de nivel de servicio (SLA) con una disponibilidad ligeramente inferior y unos costes de acceso mayores, en comparación con los datos de acceso 
+    frecuente, es aceptable a cambio de unos costes de almacenamiento menores.
+    
+    * El almacenamiento de archivo almacena datos sin conexión y ofrece los menores costos de almacenamiento, pero los mayores costos de acceso y rehidratación de 
+    datos.
+
+
+AZURE FILES
+El almacenamiento de Azure Files ofrece recursos compartidos de archivos totalmente administrados en la nube a los que se puede acceder mediante los protocolos 
+Bloque de mensajes del servidor (SMB) o Sistema de archivos en red (NFS) estándar del sector. Los recursos compartido de archivos de Azure Files se pueden montar 
+simultáneamente mediante implementaciones locales o en la nube. A los recursos compartidos de archivos SMB de Azure se puede acceder desde clientes Windows, Linux y 
+macOS. A los recursos compartidos de archivos NFS de Azure Files se puede acceder desde clientes Linux y macOS. Además, los recursos compartidos de archivos SMB de 
+Azure Files se pueden almacenar en la caché de los servidores de Windows Server con Azure File Sync, lo que permite un acceso rápido allí donde se utilizan los 
+datos.
+
+
+VENTAJAS CLAVE DE AZURE FILES
+    * Acceso compartido: los recursos compartidos de Azure Files admiten los protocolos SMB y NFS estándar del sector, lo que significa que puede reemplazar 
+    perfectamente los recursos compartidos de archivos en local por recursos compartidos de archivos de Azure sin preocuparse de compatibilidad de aplicaciones.
+
+    * Totalmente administrado: los recursos compartidos de Azure Files pueden crearse sin necesidad de administrar ni el hardware ni un sistema operativo. Esto 
+    significa que no tiene que tratar con la aplicación de actualizaciones de seguridad críticas en el sistema operativo del servidor ni ocuparse de reemplazar 
+    discos duros defectuosos.
+
+    * Scripts y herramientas: se pueden usar cmdlets de PowerShell y la CLI de Azure para crear, montar y administrar recursos compartidos de archivos de Azure como 
+    parte de la administración de las aplicaciones de Azure. Los recursos compartidos de archivos de Azure se pueden crear y administrar mediante Azure Portal y el 
+    Explorador de Azure Storage.
+
+    * Resistencia: Azure Files se creó desde sus orígenes para estar siempre disponible. Reemplazar los recursos compartidos de archivos en el entorno local por 
+    Azure Files significa que ya no tendrá que levantarse en mitad de la noche para tratar con problemas de red o interrupciones del suministro eléctrico local.
+
+    * Capacidad de programación intuitiva: las aplicaciones que se ejecutan en Azure pueden tener acceso a los datos en el recurso compartido mediante las API de E/
+    S del sistema de archivos. Por tanto, los desarrolladores pueden aprovechar el código y los conocimientos que ya tienen para migrar las aplicaciones actuales. 
+    Además de las API de E/S del sistema, puede usar las Bibliotecas de cliente de Azure Storage o la API de REST de Azure Storage.
+
+
+COLAS DE AZURE
+Azure Queue Storage es un servicio para almacenar grandes cantidades de mensajes, Una vez que están almacenados, se puede acceder a los mensajes desde cualquier 
+lugar del mundo mediante llamadas autenticadas con HTTP o HTTPS. Una cola puede contener tantos mensajes como el espacio que tenga la cuenta de almacenamiento 
+(pueden ser millones). Cada mensaje individual de la cola puede llegar a tener un tamaño máximo de 64 KB. Las colas se utilizan normalmente para crear un trabajo 
+pendiente del trabajo que se va a procesar de forma asincrónica.
+
+Queue Storage se puede combinar con funciones de proceso como Azure Functions para realizar una acción cuando se recibe un mensaje. Por ejemplo, supongamos que 
+quiere realizar una acción después de que un cliente cargue un formulario en el sitio web. Podría hacer que el botón enviar en el sitio web desencadene un mensaje 
+en Queue Storage. Después, podría usar Azure Functions para desencadenar una acción una vez recibido el mensaje.
+
+
+AZURE DISKS
+El almacenamiento en Azure Disk o los discos administrados de Azure son volúmenes de almacenamiento de nivel de bloque que administra Azure para su uso con máquinas 
+virtuales de Azure. Conceptualmente, son iguales que un disco físico, pero están virtualizados, lo que ofrece mayor resistencia y disponibilidad que un disco 
+físico. Con los discos administrados, lo único que debe hacer es aprovisionar el disco; Azure se encargará del resto.
+
+
+TABLAS DE AZURE
+Azure Table Storage permite almacenar una gran cantidad de datos estructurados. Las tablas de Azure son un almacén de datos NoSQL que acepta llamadas autenticadas 
+desde dentro y fuera de la nube de Azure. Esto le permite usar tablas de Azure para compilar la solución híbrida o multinube y hacer que los datos estén siempre 
+disponibles. Las tablas de Azure son ideales para el almacenamiento de datos estructurados no relacionales.

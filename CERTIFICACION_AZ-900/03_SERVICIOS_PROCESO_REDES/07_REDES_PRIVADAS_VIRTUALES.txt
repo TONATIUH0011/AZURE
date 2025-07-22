@@ -1,0 +1,72 @@
+DESCRIPCION DE REDES PRIVADAS VIRTUALES DE AZURE
+
+Una red privada virtual (VPN) usa un túnel cifrado en otra red. Normalmente, las VPN se implementan para conectar entre sí dos o más redes privadas de confianza a 
+través de una red que no es de confianza (normalmente, la red pública de Internet). El tráfico se cifra mientras viaja por la red que no es de confianza para evitar 
+ataques de interceptación o de otro tipo. Las VPN pueden permitir que las redes compartan información confidencial de forma segura.
+
+
+PUERTA DE ENLACE DE VPN 
+Una puerta de enlace de VPN es un tipo de puerta de enlace de red virtual. Las instancias de Azure VPN Gateway se implementan en una subred dedicada de la red 
+virtual y permiten la conectividad siguiente:
+
+    * Conectar los centros de datos locales a redes virtuales a través de una conexión de sitio a sitio.
+    * Conectar los dispositivos individuales a redes virtuales a través de una conexión de punto a sitio.
+    * Conectar las redes virtuales a otras redes virtuales a través de una conexión entre redes.
+
+Todas las transferencias de datos se cifran en un túnel privado mientras atraviesan Internet. Solo se puede implementar una única instancia de puerta de enlace de 
+VPN en cada red virtual. Sin embargo, se puede usar una puerta de enlace para conectarse a varias ubicaciones, que incluye otras redes virtuales o centros de datos 
+locales.
+
+Al configurar una instancia de VPN Gateway, debe especificar el tipo de red privada virtual, es decir, basada en directivas o basada en rutas. La distinción 
+principal entre estos dos tipos es cómo determinan qué tráfico necesita cifrado. En Azure, independientemente del tipo de red privada virtual, el método de 
+autenticación que se emplea es una clave compartida previamente.
+
+    * Las instancias de VPN Gateway basadas en directivas especifican de forma estática la dirección IP de los paquetes que se deben cifrar a través de cada túnel. 
+    Este tipo de dispositivo evalúa cada paquete de datos en función de los conjuntos de direcciones IP para elegir el túnel a través del cual se va a enviar el 
+    paquete.
+
+    * En las puertas de enlace basadas en rutas, los túneles IPSec se modelan como una interfaz de red o una interfaz de túnel virtual. El enrutamiento IP (ya sean 
+    rutas estáticas o protocolos de enrutamiento dinámico) decide cuál de estas interfaces de túnel se va a usar al enviar cada paquete. Las redes privadas 
+    virtuales basadas en rutas son el método preferido para conectar dispositivos locales. Son más resistentes a los cambios de la topología, como la creación de 
+    subredes.
+
+Si necesita alguno de los siguientes tipos de conectividad, use una instancia de VPN Gateway basada en rutas:
+
+    * Conexiones entre redes virtuales
+    * Conexiones de punto a sitio
+    * Conexiones de varios sitios
+    * Coexistencia con una puerta de enlace de Azure ExpressRoute
+
+
+ESCENARIOS DE ALTA DISPONIBILIDAD
+Si va a configurar una VPN para mantener la información segura, también querrá asegurarse de que es una configuración de VPN de alta disponibilidad y tolerante a 
+errores. Hay varias maneras de maximizar la resistencia de la puerta de enlace de VPN.
+
+
+CONFIGURACION DE ACTIVO-EN ESPERA 
+De forma predeterminada, las instancias de VPN Gateway se implementan como dos instancias en una configuración de activo-en espera, incluso si solo ve un recurso de 
+VPN Gateway en Azure. Cuando el mantenimiento planeado o la interrupción imprevista afectan a la instancia activa, la instancia en espera asume de forma automática 
+la responsabilidad de las conexiones sin ninguna intervención del usuario. Durante esta conmutación por error, las conexiones se interrumpen, pero por lo general se 
+restauran a los pocos segundos, en caso de mantenimiento planeado, y en un plazo de 90 segundos, en caso de interrupciones imprevistas.
+
+
+ACTIVO/ACTIVO
+Al incorporar compatibilidad con el protocolo de enrutamiento de BGP, también puede implementar puertas de enlace VPN en una configuración del tipo activo/activo. 
+En esta configuración, se asigna una IP pública única a cada instancia. Después, se crean túneles independientes desde el dispositivo local a cada dirección IP. Se 
+puede ampliar la alta disponibilidad mediante la implementación de un dispositivo VPN local adicional.
+
+
+CONMUTACION POR ERROR DE EXPRESS-ROUTE
+Otra opción de alta disponibilidad consiste en configurar una instancia de VPN Gateway como una ruta segura de conmutación por error para las conexiones 
+ExpressRoute. Los circuitos ExpressRoute tienen resistencia integrada. Sin embargo, no son inmunes a los problemas físicos que afectan a los cables que entregan 
+conectividad ni a las interrupciones que afectan a la ubicación completa de ExpressRoute. En escenarios de alta disponibilidad, en los que existe un riesgo asociado 
+a una interrupción de un circuito ExpressRoute, también puede aprovisionar una instancia de VPN Gateway que usa Internet como un método alternativo de conectividad. 
+De este modo, puede garantizar que siempre haya una conexión a las redes virtuales.
+
+
+PUERTAS DE ENLACE CON REDUNDANCIA DE ZONA
+En las regiones que admiten zonas de disponibilidad, se pueden implementar puertas de enlace VPN y ExpressRoute en una configuración con redundancia de zona. Esta 
+configuración aporta una mayor disponibilidad, escalabilidad y resistencia a las puertas de enlace de red virtual. Implementar puertas de enlace en Azure 
+Availability Zones separa de forma física y lógica las puertas de enlace dentro de una región, al mismo tiempo que protege la conectividad de red local en Azure de 
+errores de nivel de zona. Estas puertas de enlace requieren diferentes referencias de almacén (SKU) de puerta de enlace y usan direcciones IP públicas estándar en 
+lugar de direcciones IP públicas básicas.

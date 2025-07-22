@@ -1,0 +1,37 @@
+IDENTIFICACION DE LAS OPCIONES DE MOVIMIENTO DE ARCHIVOS DE AZURE
+
+Además de la migración a gran escala mediante servicios como Azure Migrate y Azure Data Box, Azure también tiene herramientas diseñadas para ayudarle a mover o 
+interactuar con archivos individuales o grupos de archivos pequeños. Entre esas herramientas se encuentran AzCopy, Explorador de Azure Storage y Azure File Sync.
+
+
+AZ-COPY
+AzCopy es una utilidad de línea de comandos que puede usar para copiar blobs o archivos a una cuenta de almacenamiento o desde una cuenta de almacenamiento. Con 
+AzCopy, puede copiar archivos entre cuentas de almacenamiento, cargarlos, descargarlos e incluso sincronizarlos. AzCopy incluso se puede configurar para trabajar 
+con otros proveedores de nube para ayudar a mover archivos entre nubes.
+
+    Importante
+La sincronización de blobs o archivos con AzCopy es una sincronización unidireccional. Cuando se sincroniza, designa el origen y el destino, y AzCopy copiará 
+archivos o blobs en esa dirección. No se sincroniza bidireccionalmente en función de las marcas de tiempo u otros metadatos.
+
+
+EXPLORADOR DE AZURE STORAGE
+Explorador de Azure Storage es una aplicación independiente que proporciona una interfaz gráfica para administrar archivos y blobs en la cuenta de Azure Storage. 
+Funciona en sistemas operativos Windows, macOS y Linux y usa AzCopy en el back-end para realizar todas las tareas de administración de archivos y blobs. Con 
+Explorador de Storage, puede cargar en Azure, descargar desde Azure o moverse entre cuentas de almacenamiento.
+
+
+AZURE FILE SYNC
+Azure File Sync es una herramienta que permite centralizar los archivos compartidos en Azure Files y mantener la flexibilidad, el rendimiento y la compatibilidad de 
+un servidor de archivos de Windows. Es casi como convertir el servidor de archivos de Windows en una red de entrega de contenido en miniatura. Una vez que instale 
+Azure File Sync en el servidor local de Windows, se mantendrá sincronizado bidireccionalmente con los archivos en Azure de forma automática.
+
+Con Azure File Sync, puede:
+
+    * Usar cualquier protocolo disponible en Windows Server para acceder a sus datos de forma local, como SMB, NFS y FTPS.
+    
+    * Tener todas las cachés que necesite en todo el mundo.
+    
+    * Reemplazar un servidor local con errores instalando Azure File Sync en un nuevo servidor del mismo centro de datos.
+    
+    * Configurar la nube por niveles para que los archivos a los que se accede con más frecuencia se repliquen localmente, mientras que los archivos a los que se 
+    accede con poca frecuencia se mantienen en la nube hasta que se soliciten.

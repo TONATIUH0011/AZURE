@@ -1,0 +1,25 @@
+DESCRIPCION DE LAS CUENTAS DE ALMACENAMIENTO DE AZURE 
+
+Una cuenta de almacenamiento proporciona un espacio de nombres único para los datos de Azure Storage al que se puede acceder desde cualquier lugar del mundo a 
+través de HTTP o HTTPS. Los datos de esta cuenta son seguros, de alta disponibilidad, duraderos y escalables de forma masiva.
+
+Al crear la cuenta de almacenamiento, primero seleccionará el tipo de cuenta de almacenamiento. El tipo de cuenta determina los servicios de almacenamiento y las 
+opciones de redundancia, y afecta a los casos de uso. A continuación se muestra una lista de opciones de redundancia que se describirán más adelante en este módulo:
+
+    * Almacenamiento con redundancia local (LRS)
+    * Almacenamiento con redundancia geográfica (GRS)
+    * Almacenamiento con redundancia geográfica con acceso de lectura (RA-GRS).
+    * Almacenamiento con redundancia de zona (ZRS)
+    * Almacenamiento con redundancia de zona geográfica (GZRS)
+    * Almacenamiento con redundancia de zona geográfica con acceso de lectura (RA-GZRS)
+
+
+PUNTOS DE CONEXION DE CUENTA DE ALMACENAMIENTO 
+Una de las ventajas de usar una cuenta de Azure Storage es tener un espacio de nombres único en Azure para los datos. Para ello, todas las cuentas de almacenamiento 
+de Azure deben tener un nombre de cuenta único en Azure. La combinación del nombre de la cuenta y el punto de conexión del servicio de Azure Storage forma los 
+puntos de conexión de su cuenta de almacenamiento.
+
+Cuando especifique un nombre para la cuenta de almacenamiento, tenga en cuenta estas reglas:
+
+    * Los nombres de las cuentas de almacenamiento deben tener entre 3 y 24 caracteres, y solo pueden incluir números y letras en minúscula.
+    * El nombre de la cuenta de almacenamiento debe ser único dentro de Azure. No puede haber dos cuentas de almacenamiento con el mismo nombre. Esto admite la capacidad de tener un espacio de nombres único y accesible en Azure.

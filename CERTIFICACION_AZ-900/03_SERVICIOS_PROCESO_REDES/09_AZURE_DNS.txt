@@ -1,0 +1,45 @@
+DESCRIBIR AZURE DNS
+
+Azure DNS es un servicio de hospedaje para dominios DNS que ofrece resolución de nombres mediante la infraestructura de Microsoft Azure. Al hospedar dominios en 
+Azure, puede administrar los registros DNS con las mismas credenciales, API, herramientas y facturación que con los demás servicios de Azure.
+
+
+VENTAJAS DE AZURE DNS
+Azure DNS usa el ámbito y la escala de Microsoft Azure para ofrecer muchas ventajas, entre las que se incluyen:
+
+    * Confiabilidad y rendimiento
+    * Seguridad
+    * Facilidad de uso
+    * Redes virtuales personalizables
+    * Registros de alias
+
+
+CONFIABILIDAD Y RENDIMIENTO
+Los dominios DNS de Azure DNS se hospedan en la red global de servidores de nombres DNS de Azure, y proporcionan resistencia y alta disponibilidad. Azure DNS usa 
+redes de difusión por proximidad, por lo que el servidor DNS más próximo disponible responde todas las consultas de DNS, lo que proporciona un mejor rendimiento y 
+una mayor disponibilidad para el dominio.
+
+
+SEGURIDAD
+Azure DNS se basa en Azure Resource Manager, que proporciona características tales como:
+
+    * Control de acceso basado en rol de Azure (Azure RBAC) para controlar quién accede a acciones específicas en la organización.
+    * Registros de actividad: para supervisar cómo un usuario de su organización modificó un recurso o para encontrar errores al solucionar problemas.
+    * Bloqueo de recursos para bloquear una suscripción, un grupo de recursos o un recurso. Los bloqueos impiden que otros usuarios de la organización eliminen o 
+    modifiquen de forma accidental recursos críticos.
+
+
+FACILIDAD DE USO
+Azure DNS puede administrar registros DNS para los servicios de Azure y también proporciona el servicio de nombres de dominio para los recursos externos. Azure DNS 
+está integrado en Azure Portal y usa las mismas credenciales, la misma facturación y el mismo contrato de soporte técnico que los demás servicios de Azure.
+
+Como Azure DNS se ejecuta en Azure, significa que puede administrar los dominios y registros con Azure Portal, cmdlets de Azure PowerShell y la CLI de Azure 
+multiplataforma. Las aplicaciones que requieren la administración automática de DNS se pueden integrar con el servicio mediante las API REST y los SDK.
+
+
+REDES VIRTUALES PERSONALIZABLES CON DOMINIOS PRIVADOS
+Azure DNS es compatible con dominios DNS privados. Esta característica permite usar nombres de dominio personalizados propios en las redes virtuales privadas, en lugar de limitarse a los nombres proporcionados por Azure.
+
+
+REGISTROS DE ALIAS
+Azure DNS también admite conjuntos de registros de alias. Puede usar un conjunto de registros de alias que haga referencia a un recurso de Azure, como una dirección IP pública de Azure, un perfil de Azure Traffic Manager o un punto de conexión de Azure Content Delivery Network (CDN). Si cambia la dirección IP del recurso subyacente, el conjunto de registros de alias se actualiza sin problemas durante la resolución DNS. El conjunto de registros de alias apunta a la instancia de servicio, y la instancia de servicio está asociada con una dirección IP.
