@@ -1,0 +1,89 @@
+DESCRIPCION DE LOS SERVICIOS DE DIRECTORIO DE AZURE
+
+Microsoft Entra ID es un servicio de directorio que le permite iniciar sesión y acceder tanto a las aplicaciones en la nube de Microsoft como a las aplicaciones en 
+la nube que desarrolle. Microsoft Entra ID también puede ayudarle a mantener la implementación de Active Directory local.
+
+En el caso de los entornos locales, Active Directory ejecutado en Windows Server proporciona un servicio de administración de acceso e identidades que administra su 
+organización. Microsoft Entra ID es el servicio de administración de identidades y acceso basada en la nube de Microsoft. Con Microsoft Entra ID, usted controla las 
+cuentas de identidad, pero Microsoft garantiza que el servicio esté disponible globalmente. Si ha trabajado con Active Directory, Microsoft Entra ID le resultará 
+familiar.
+
+Si protege las identidades de forma local con Active Directory, Microsoft no supervisa los intentos de inicio de sesión. Si conecta Active Directory con Microsoft 
+Entra ID, Microsoft puede detectar intentos de inicio de sesión sospechosos para ayudarle a proteger su entorno sin costo adicional. Por ejemplo, Microsoft Entra ID 
+puede detectar intentos de inicio de sesión desde ubicaciones inesperadas o dispositivos desconocidos.
+
+
+¿QUIEN USA MICROSOFT ENTRA ID?
+Microsoft Entra ID es para:
+
+    * Administradores de TI. Los administradores pueden usar Microsoft Entra ID para controlar el acceso a las aplicaciones y los recursos en función de sus 
+    requisitos empresariales.
+    
+    * Desarrolladores de aplicaciones. Con Microsoft Entra ID, los desarrolladores pueden agregar funcionalidad a las aplicaciones que compilan mediante un enfoque 
+    basado en estándares. Por ejemplo, pueden agregar funcionalidad de SSO a una aplicación o habilitar una aplicación para que funcione con las credenciales 
+    existentes de un usuario.
+
+    * Usuarios. Los usuarios pueden administrar sus identidades y realizar acciones de mantenimiento como el autoservicio de restablecimiento de contraseña.
+    
+    * Suscriptores de servicios en línea. Los suscriptores de Microsoft 365, Microsoft Office 365, Azure y Microsoft Dynamics CRM Online ya usan Microsoft Entra ID 
+    para autenticarse en su cuenta.
+
+
+¿QUE HACE MICROSOFT ENTRA ID?
+Microsoft Entra ID proporciona servicios como:
+
+    * Autenticación: esto incluye la comprobación de la identidad para acceder a aplicaciones y recursos. También incluye funciones como el autoservicio de 
+    restablecimiento de contraseña, la autenticación multifactor, una lista personalizada de contraseñas prohibidas y servicios de bloqueo inteligente.
+    
+    * Inicio de sesión único: gracias al inicio de sesión único (SSO), los usuarios tienen que recordar un solo nombre de usuario y una sola contraseña para acceder 
+    a varias aplicaciones. Una sola identidad está asociada a un usuario, lo que simplifica el modelo de seguridad. Cuando los usuarios cambian de rol o dejan una 
+    organización, las modificaciones de acceso se asocian a esa identidad, lo que reduce considerablemente el esfuerzo necesario para cambiar o deshabilitar cuentas.
+
+    * Administración de aplicaciones: Con Microsoft Entra ID, puede administrar las aplicaciones en la nube y locales. Características como Application Proxy, las 
+    aplicaciones SaaS, el portal Aplicaciones y el inicio de sesión único proporcionan una mejor experiencia de usuario.
+
+    * Administración de dispositivos: Además de cuentas de usuarios individuales, Microsoft Entra ID admite el registro de dispositivos. El registro permite 
+    administrar los dispositivos a través de herramientas como Microsoft Intune. También permite que las directivas de acceso condicional basadas en dispositivos 
+    limiten los intentos de acceso a solo aquellos que proceden de dispositivos conocidos, independientemente de la cuenta de usuario solicitante.
+
+
+¿PUEDO CONECTAR MI AD LOCAL CON MICROSOFT ENTRA ID?
+Si tuviera un entorno local que ejecuta Active Directory y una implementación en la nube mediante Microsoft Entra ID, tendría que mantener dos conjuntos de 
+identidades. Pero puede conectar Active Directory con Microsoft Entra ID, lo que permite una experiencia de identidad coherente entre la nube y el entorno local.
+
+Un método para conectar Microsoft Entra ID con su AD local es usar Microsoft Entra Connect. Microsoft Entra Connect sincroniza las identidades de usuario entre 
+Active Directory local y Microsoft Entra ID. Microsoft Entra Connect sincroniza los cambios entre ambos sistemas de identidades, para que pueda usar características 
+como SSO, la autenticación multifactor y el autoservicio de restablecimiento de contraseña en ambos sistemas.
+
+
+¿QUE ES MICROSOFT ENTRA DOMAIN SERVICES?
+Microsoft Entra Domain Services (Azure AD DS) es un servicio que proporciona servicios de dominio administrados como, por ejemplo, unión a un dominio, directivas de 
+grupo, protocolo ligero de acceso a directorios (LDAP) y autenticación Kerberos o NTLM. Al igual que Microsoft Entra ID le permite usar servicios de directorio sin 
+tener que mantener la infraestructura que lo admite, gracias a Microsoft Entra Domain Services, obtiene la ventaja de los servicios de dominio sin necesidad de 
+implementar, administrar y aplicar revisiones a los controladores de dominio (DC) en la nube.
+
+Un dominio administrado de Microsoft Entra Domain Services le permite ejecutar aplicaciones heredadas en la nube que no pueden usar métodos de autenticación 
+modernos o en las que no quiere que las búsquedas de directorio regresen siempre a un entorno de AD DS local. Esas aplicaciones heredadas se pueden migrar mediante 
+"lift-and-shift" del entorno local a un dominio administrado, sin necesidad de administrar el entorno de AD DS en la nube.
+
+Microsoft Entra Domain Services se integra con el inquilino de Microsoft Entra existente. Esta integración permite a los usuarios iniciar sesión en los servicios y 
+las aplicaciones conectados al dominio administrado con sus credenciales existentes. También puede usar grupos y cuentas de usuario existentes para proteger el 
+acceso a los recursos. Estas características proporcionan una migración mediante lift-and-shift más fluida de los recursos locales a Azure.
+
+
+¿COMO FUNCIONA MICROSOFT ENTRA DOMAIN SERVICES?
+Cuando cree un dominio administrado de Microsoft Entra Domain Services, defina un espacio de nombres único. Este espacio de nombres es el nombre de dominio. 
+Después, se implementan dos controladores de dominio de Windows Server en la región de Azure seleccionada. Esta implementación de controladores de dominio se conoce 
+como "conjunto de réplicas".
+
+No es necesario administrar, configurar ni actualizar estos controladores de dominio. La plataforma Azure administra los controladores de dominio como parte del 
+dominio administrado, incluidas las copias de seguridad y el cifrado en reposo mediante Azure Disk Encryption.
+
+
+¿LA INFORMACION ESTA SINCRONIZADA?
+Un dominio administrado está configurado para realizar una sincronización unidireccional desde Microsoft Entra ID a Microsoft Entra Domain Services. Puede crear los 
+recursos directamente en el dominio administrado, pero no se vuelven a sincronizar con Microsoft Entra ID. En un entorno híbrido con un entorno de AD DS local, 
+Microsoft Entra Connect sincroniza la información de identidad con Microsoft Entra ID, que se sincroniza posteriormente con el dominio administrado.
+
+Las aplicaciones, los servicios y las máquinas virtuales de Azure que se conectan al dominio administrado pueden usar las características de Microsoft Entra Domain 
+Services comunes, como unión a un dominio, directiva de grupo, LDAP y autenticación Kerberos o NTLM.

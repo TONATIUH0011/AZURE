@@ -1,0 +1,108 @@
+DESCRIPCION DE LOS METODOS DE AUTENTICACION DE AZURE 
+
+La autenticación es el proceso de establecimiento de la identidad de una persona, servicio y dispositivo. Requiere que la persona, el servicio o el dispositivo 
+proporcionen algún tipo de credencial para demostrar quiénes son. La autenticación es como presentar su documento de identidad cuando viaja. No confirma que está 
+registrado, solo demuestra que es quien dices que es. Azure admite varios métodos de autenticación, incluidas las contraseñas estándar, el inicio de sesión único 
+(SSO), la autenticación multifactor (MFA) y el acceso sin contraseña.
+
+Desde hace tiempo, la seguridad y la comodidad parecían estar en conflicto entre sí. Afortunadamente, las nuevas soluciones de autenticación proporcionan seguridad 
+y comodidad.
+
+En el diagrama siguiente se muestra el nivel de seguridad en comparación con la comodidad. Observe que la autenticación sin contraseña es alta seguridad y alta 
+comodidad, mientras que las contraseñas por sí mismas son de baja seguridad pero alta comodidad.
+
+
+¿QUE ES EL INICIO DE SESION UNICO?
+El inicio de sesión único (SSO) permite a los usuarios iniciar sesión una vez y utilizar esa credencial para acceder a varios recursos y aplicaciones de distintos 
+proveedores. Para que el inicio de sesión único funcione, las distintas aplicaciones y proveedores deben confiar en el autenticador inicial.
+
+Más identidades significan más contraseñas para recordar y cambiar. Las directivas de contraseñas pueden variar entre las aplicaciones. A medida que aumentan los 
+requisitos de complejidad, cada vez resultan más difíciles de recordar para los usuarios. Cuantas más contraseñas tenga que administrar un usuario, mayor será el 
+riesgo de que se produzca alguna incidencia de seguridad relacionada con las credenciales.
+
+Piense en el proceso de administrar todas estas identidades. Se ejerce una mayor presión en el departamento de soporte técnico cuando tienen que lidiar con los 
+bloqueos de cuentas y las solicitudes de restablecimiento de contraseñas. Si un usuario deja una organización, puede resultar complicado hacer un seguimiento de 
+todas sus identidades y asegurarse de que están deshabilitadas. Si se pasa por alto una identidad, es posible que se permita el acceso cuando debería haberse 
+eliminado.
+
+Con SSO, tan solo debe recordar un ID y una contraseña. El acceso a todas las aplicaciones se concede a una única identidad que está asociada a un usuario, lo que 
+simplifica el modelo de seguridad. A medida que los usuarios cambian los roles o dejan una organización, el acceso está asociado a una única identidad. Este cambio 
+reduce considerablemente el esfuerzo necesario para cambiar o deshabilitar cuentas. Usar el inicio de sesión único en las cuentas permite a los usuarios administrar 
+su identidad y al equipo de TI gestionar los usuarios con mayor facilidad.
+
+    Importante
+    El inicio de sesión único solo es tan seguro como el autenticador inicial, ya que todas las conexiones posteriores se basan en la seguridad del autenticador 
+    inicial.
+
+
+¿QUE ES LA AUTENTICACION MULTIFACTOR?
+La autenticación multifactor es el proceso de solicitar a un usuario una forma adicional (o factor) de identificación durante el proceso de inicio de sesión. La MFA 
+ayuda a protegerse frente a las contraseñas en riesgo en situaciones en las que la contraseña se vio comprometida, pero el segundo factor no.
+
+Piense en cómo inicia sesión en los sitios web, el correo electrónico o los servicios en línea. Después de escribir el nombre de usuario y la contraseña, ¿alguna 
+vez ha tenido que escribir un código que ha recibido en el teléfono? Si es así, ha usado la autenticación multifactor para iniciar sesión.
+
+La autenticación multifactor proporciona seguridad adicional a las identidades, ya que se requieren dos o más elementos para una autenticación completa. Estos 
+elementos se dividen en tres categorías:
+    
+    * Algo que el usuario sabe: puede ser una pregunta de seguridad.
+    * Algo que el usuario tiene: se puede tratar de un código que se envía al teléfono móvil del usuario.    
+    * Algo que el usuario es: normalmente, algún tipo de propiedad biométrica, como la huella dactilar o el escaneo facial.
+
+La autenticación multifactor aumenta la seguridad de las identidades al limitar el impacto de la exposición de credenciales (por ejemplo, nombres de usuario y 
+contraseñas robados). Si la autenticación multifactor está habilitada, los atacantes que tengan la contraseña de un usuario también necesitarán su teléfono o su 
+huella dactilar para completar la autenticación.
+
+Compare la autenticación multifactor con la autenticación de un solo factor. En la autenticación de un solo factor, los atacantes solo necesitarían el nombre de 
+usuario y la contraseña para autenticarse. La autenticación multifactor se debe habilitar siempre que sea posible, ya que aporta enormes ventajas a la seguridad.
+
+
+¿QUE ES LA AUTENTICACION MULTIFACTOR DE MICROSOFT ENTRA?
+La autenticación multifactor de Microsoft Entra es un servicio de Microsoft que proporciona funcionalidades de autenticación multifactor. La autenticación 
+multifactor de Microsoft Entra permite a los usuarios elegir una forma adicional de autenticación durante el inicio de sesión, como una llamada telefónica o una 
+notificación de aplicación móvil.
+
+
+¿QUE ES LA AUTENTICACION SIN CONTRASEÑA?
+El uso de características como la autenticación multifactor constituye una excelente manera de proteger una organización. Sin embargo, sumar esta capa de seguridad 
+adicional al hecho de tener que recordar las contraseñas suele frustrar a los usuarios. Es más probable que las personas cumplan cuando sea fácil y conveniente 
+hacerlo. Los métodos de autenticación sin contraseña resultan más cómodos, ya que la contraseña se quita y se reemplaza por algo que se tiene más algo que se es o 
+se sabe.
+
+La autenticación sin contraseña debe configurarse en un dispositivo para que funcione. Por ejemplo, su ordenador es algo que tiene. Una vez que se haya registrado o 
+inscrito, Azure ahora sabrá que está asociado a usted. Ahora que se conoce el equipo, una vez que proporcione algo que sepa o sea (por ejemplo, un PIN o una huella 
+digital), se podrá autenticar sin usar una contraseña.
+
+Cada organización tiene diferentes necesidades en cuanto a la autenticación. Microsoft Azure global y Azure Government ofrecen las siguientes tres opciones de 
+autenticación sin contraseña que se integran con Microsoft Entra ID:
+
+    * Windows Hello para empresas
+    * Aplicación Microsoft Authenticator
+    * Claves de seguridad FIDO2
+
+
+WINDOWS HELLO PARA EMPRESAS
+Windows Hello para empresas resulta muy conveniente para los trabajadores de la información que tienen su propio equipo con Windows designado. La información 
+biométrica y las credenciales de PIN están vinculadas directamente al equipo del usuario, lo que impide el acceso de cualquier persona que no sea el propietario. 
+Con la integración de la infraestructura de clave pública (PKI) y la compatibilidad integrada con el inicio de sesión único (SSO), Windows Hello para empresas 
+ofrece un método sencillo y práctico de acceder directamente a los recursos corporativos del entorno local y la nube.
+
+
+APLICACION MICROSOFT AUTHENTICATOR
+También puede permitir que el teléfono del empleado se convierta en un método de autenticación sin contraseña. Es posible que ya esté utilizando la aplicación 
+Microsoft Authenticator como una opción de autenticación multifactor cómoda, además de una contraseña. También puede usar la aplicación Authenticator como una 
+opción sin contraseña.
+
+La aplicación Authenticator convierte cualquier teléfono Android o iOS en una credencial segura sin contraseña. Los usuarios pueden iniciar sesión en cualquier 
+plataforma o explorador con este proceso: reciben una notificación en su teléfono, comprueban que el número mostrado en la pantalla coincide con el de su teléfono 
+y, a continuación, usan datos biométricos (huella dactilar o reconocimiento facial) o el PIN para confirmarlo. Consulte Descarga e instalación de la aplicación 
+Microsoft Authenticator para conocer los detalles de la instalación.
+
+
+CLAVES DE SEGURIDAD FIDO2
+FIDO (Fast IDentity Online) Alliance ayuda a promover los estándares de autenticación abiertos y a reducir el uso de contraseñas como forma de autenticación. FIDO2 es el estándar más reciente que incorpora el estándar de autenticación web (WebAuthn).
+
+Las claves de seguridad FIDO2 son un método de autenticación sin contraseña basado en estándares que no permite la suplantación de identidad y que puede venir en cualquier factor de forma. Fast Identity Online (FIDO) es un estándar abierto para la autenticación sin contraseña. FIDO permite a los usuarios y a las organizaciones aprovechar el estándar para iniciar sesión en sus recursos sin un nombre de usuario o una contraseña mediante una clave de seguridad externa o una clave de plataforma integrada en un dispositivo.
+
+Los usuarios pueden registrarse y luego seleccionar una llave de seguridad de FIDO2 en la interfaz de inicio de sesión como medio principal de autenticación. Estas llaves de seguridad de FIDO2 suelen ser dispositivos USB, pero también pueden usar Bluetooth o NFC. Con un dispositivo de hardware que controla la autenticación, se aumenta la seguridad de una cuenta, ya que no hay ninguna contraseña que pueda quedar expuesta ni adivinarse.
+

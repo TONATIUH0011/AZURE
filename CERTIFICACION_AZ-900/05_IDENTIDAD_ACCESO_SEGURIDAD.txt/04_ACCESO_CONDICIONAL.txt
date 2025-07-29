@@ -1,0 +1,41 @@
+DESCRIPCION DEL ACCESO CONDICIONAL DE AZURE
+
+El acceso condicional es una herramienta que usa Microsoft Entra ID para permitir (o denegar) el acceso a los recursos en función de señales de identidad. Estas 
+señales incluyen quién es el usuario, dónde se encuentra y desde qué dispositivo solicita el acceso.
+
+Con el acceso condicional, los administradores de TI pueden:
+
+    * permitir a los usuarios ser productivos en cualquier momento y lugar;
+    * proteger los recursos de la organización.
+
+El acceso condicional también proporciona una experiencia de autenticación multifactor más pormenorizada para los usuarios. Por ejemplo, es posible que al usuario 
+no se le solicite un segundo factor de autenticación si está en una ubicación conocida. Pero si sus señales de inicio de sesión son inusuales o su ubicación es 
+inesperada, es posible que se le exija un segundo factor de autenticación.
+
+Durante el inicio de sesión, el acceso condicional recopila señales del usuario, toma decisiones basadas en esas señales y, después, aplica esa decisión para 
+permitir o denegar la solicitud de acceso, o bien exigir una respuesta de autenticación multifactor.
+
+En este caso, la señal podría ser la ubicación del usuario, su dispositivo o la aplicación a la que intenta acceder.
+
+En función de estas señales, la decisión puede ser permitir el acceso completo si el usuario inicia sesión desde su ubicación habitual. Si el usuario inicia sesión 
+desde una ubicación inusual o una ubicación marcada como de alto riesgo, el acceso puede bloquearse por completo, o bien podría concederse después de que el usuario 
+proporcione una segunda forma de autenticación.
+
+La aplicación es la acción que lleva a cabo la decisión. Por ejemplo, la acción es permitir el acceso o exigir al usuario que proporcione una segunda forma de 
+autenticación.
+
+
+¿CUANDO SE PUEDE USAR EL ACCESO CONDICIONAL?
+El acceso condicional resulta útil en los casos siguientes:
+
+    * Exija la autenticación multifactor (MFA) para acceder a una aplicación en función del rol, la ubicación o la red del solicitante. Por ejemplo, podría requerir 
+    MFA para administradores, pero no para usuarios normales o personas que se conectan desde fuera de la red corporativa.
+
+    * Para requerir el acceso a los servicios solo a través de aplicaciones cliente aprobadas. Por ejemplo, podría limitar qué aplicaciones de correo electrónico 
+    pueden conectarse al servicio de correo electrónico.
+    
+    * Exija que los usuarios accedan a la aplicación solo desde dispositivos administrados. Un dispositivo administrado es un dispositivo que cumple los estándares 
+    de seguridad y cumplimiento.
+
+    * Para bloquear el acceso desde orígenes que no son de confianza, como ubicaciones desconocidas o inesperadas.
+    

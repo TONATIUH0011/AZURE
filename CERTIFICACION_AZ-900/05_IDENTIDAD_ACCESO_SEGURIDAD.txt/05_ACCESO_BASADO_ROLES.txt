@@ -1,0 +1,56 @@
+DESCRIPCION DEL CONTROL DE ACCESO BASADO EN ROLES 
+
+Cuando tenemos varios equipos de TI e ingeniería, ¿cómo podemos controlar el acceso que tienen a los recursos del entorno de nube? El principio de privilegios 
+mínimos indica que solo debe conceder acceso al nivel necesario para completar una tarea. Si solo necesita acceso de lectura a un blob de almacenamiento, solo se le 
+debe conceder acceso de lectura a ese blob de almacenamiento. No se debe conceder acceso de escritura a ese blob ni debe tener acceso de lectura a otros blobs de 
+almacenamiento. Es una buena práctica de seguridad seguir.
+
+Pero, administrar ese nivel de permisos para todo el equipo se volvería tedioso. En vez de definir los requisitos de acceso detallados de cada individuo y, después, 
+ir actualizándolos a medida que se vayan creando más recursos o se unan nuevos miembros al equipo, Azure permite controlar el acceso a través del control de acceso 
+basado en roles de Azure (RBAC de Azure).
+
+Azure proporciona roles integrados que describen las reglas de acceso comunes de los recursos en la nube. También podemos definir nuestros propios roles. Cada rol 
+tiene un conjunto asociado de permisos de acceso que tienen que ver con ese rol. Cuando se asignan usuarios o grupos a uno o varios roles, reciben todos los 
+permisos de acceso asociados.
+
+Por lo tanto, si contrata a un nuevo ingeniero y los agrega al grupo RBAC de Azure para ingenieros, obtiene de forma automática el mismo acceso que los otros 
+ingenieros del mismo grupo de RBAC de Azure. De forma similar, si agrega recursos adicionales y apunta RBAC de Azure en ellos, todos los usuarios de ese grupo de 
+RBAC de Azure tendrán esos permisos en los nuevos recursos, así como en los recursos existentes.
+
+¿COMO SE APLICA EL CONTROL DE ACCESO BASADO EN ROLES A LOS RECURSOS?
+El control de acceso basado en roles se aplica a un ámbito, que es un recurso o un conjunto de recursos en los que este acceso se permite.
+
+En este diagrama se muestra la relación entre roles y ámbitos. Un grupo de administración, una suscripción o un grupo de recursos podría tener el rol de 
+propietario, por lo que se ha aumentado el control y la autoridad. A un observador, que no se espera que realice ninguna actualización, se le puede asignar un rol 
+de Lector para el mismo ámbito, lo que le permitiría revisar u observar el grupo de administración, la suscripción o el grupo de recursos.
+
+Los ámbitos pueden ser lo siguiente:
+
+    * Un grupo de administración (una colección de varias suscripciones)
+    * Una sola suscripción
+    * Un grupo de recursos.
+    * Un solo recurso
+
+Los observadores, los usuarios que administran recursos, los administradores y los procesos automatizados muestran los tipos de usuarios o cuentas que se suelen 
+asignar a cada uno de los distintos roles.
+
+RBAC de Azure es jerárquico, ya que al conceder acceso en un ámbito primario, todos los ámbitos secundarios heredan esos permisos. Por ejemplo:
+
+    * Cuando asignamos el rol Propietario a un usuario en el ámbito del grupo de administración, dicho usuario podrá administrar todo el contenido de todas las 
+    suscripciones dentro de ese grupo de administración.
+
+    * Cuando asignamos el rol Lector a un grupo en el ámbito de suscripción, los miembros de dicho grupo podrán ver todos los grupos de recursos y recursos dentro 
+    de esa suscripción.
+
+
+¿COMO SE APLICA RBAC DE AZURE?
+RBAC de Azure se aplica a cualquier acción que se inicie en un recurso de Azure que pasa por Azure Resource Manager. Resource Manager es un servicio de 
+administración que proporciona una forma de organizar y proteger nuestros recursos en la nube.
+
+Normalmente, se accede a Resource Manager a través de Azure Portal, Azure Cloud Shell, Azure PowerShell y la CLI de Azure. RBAC de Azure no aplica permisos de 
+acceso en el nivel de aplicación ni de datos. La seguridad de la aplicación debe controlarla la propia aplicación.
+
+RBAC de Azure emplea un modelo de permisos. Cuando se le asigna un rol, RBAC de Azure le permite realizar acciones dentro del ámbito de ese rol. Si una asignación 
+de roles nos concede permisos de lectura a un grupo de recursos y otra asignación de roles nos concede permisos de escritura al mismo grupo de recursos, tendremos 
+permisos tanto de lectura como de escritura en ese grupo de recursos.
+
